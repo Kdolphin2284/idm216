@@ -1,10 +1,100 @@
+/* ///////////////// */
+/* ///// FONTS ///// */
+/* ///////////////// */
+
+@font-face {
+    font-family: Raleway-Regular;
+    src: url(../fonts/Raleway-Regular.ttf);
+    src: url(../fonts/Raleway-Regular.woff);
+    src: url(../fonts/Raleway-Regular.woff2);
+}
+@font-face {
+    font-family: Raleway-SemiBold;
+    src: url(../fonts/Raleway-SemiBold.ttf);
+    src: url(../fonts/Raleway-SemiBold.woff);
+    src: url(../fonts/Raleway-SemiBold.woff2);
+}
+@font-face {
+    font-family: Staatliches;
+    src: url(../fonts/Staatliches-Regular.ttf);
+    src: url(../fonts/Staatliches-Regular.woff);
+    src: url(../fonts/Staatliches-Regular.woff2);
+}
+@font-face {
+    font-family: RockSalt;
+    src: url(../fonts/RockSalt.ttf);
+    src: url(../fonts/RockSalt.woff);
+    src: url(../fonts/RockSalt.woff2);
+}
+h2 {
+    display: inline-block;
+    font-size: 28px;
+    margin: 15px 0;
+}
 h3 {
     font-size: 16px;
+    margin: 0 0 15px 0;
 }
+
+
+
+/* //////////////////////////// */
+/* ///// FONT SPECIFICITY ///// */
+/* //////////////////////////// */
+
+.roleFlex h3:first-child {
+    font-family: Raleway-SemiBold;
+    color: #353535;
+}
+.roleFlex h3:last-child {
+    font-family: Raleway-Regular;
+    color: #989898;
+}
+#teamInfo .col-1-5 a {
+    color: #0F5BB5;
+    text-decoration: none;
+    font-family: Raleway-Regular;
+    font-size: 14px;
+}
+#teamInfo .col-1-5:first-child h2 {
+    color: #8330EC;
+    font-family: Staatliches;
+    letter-spacing: .5px;
+}
+#teamInfo .col-1-5:nth-child(2) h2 {
+    color: #0F5BB5;
+    font-family: RockSalt;
+}
+#teamInfo .col-1-5:nth-child(3) h2 {
+    color: #FF4F4F;
+}
+#teamInfo .col-1-5:nth-child(4) h2 {
+    color: transparent;
+    background: linear-gradient(-115deg, #FF8A00, #00B2FF);
+    background-clip: text;
+    font-size: 28px;
+    background-size: cover;
+    background-position: center;
+}
+#teamInfo .col-1-5:nth-child(5) h2 {
+    color: #40792B;
+}
+
+
+
+/* /////////////////// */
+/* ///// COLUMNS ///// */
+/* /////////////////// */
 
 .col-1-5 {
     width: 20%;
 }
+
+
+
+/* /////////////////////// */
+/* ///// MARQUEE CSS ///// */
+/* /////////////////////// */
 
 marquee {
     font-size: 60px;
@@ -16,6 +106,10 @@ marquee span {
     margin-left: 5px;
 }
 
+
+/* //////////////////////// */
+/* ///// SPECIFIC CSS ///// */
+/* //////////////////////// */
 
 #teamInfo {
     display: flex;
@@ -43,11 +137,29 @@ body {
 }
 .roleFlex h3:first-child {
     margin-right: 5px;
+    border-right: 2px solid gray;
+    padding-right: 5px;
 }
 .teamImage {
     padding-bottom: 150%;
     background: gray;
+    background-size: cover;
+    background-position: center;
 }
-  
+#teamInfo .col-1-5:first-child .teamImage{
+    background-image: url('../media/images/andrewLenehanImage.png');
+}
+#teamInfo .col-1-5:nth-child(2) .teamImage {
+    background-image: url('../media/images/tyDrakeImage.png');
+}
+#teamInfo .col-1-5:nth-child(3) .teamImage {
+    background-image: url('../media/images/kyleDolphinImage.png');
+}
+#teamInfo .col-1-5:nth-child(4) .teamImage {
+    background-image: url('../media/images/bryantLuImage.png');
+}
+#teamInfo .col-1-5:nth-child(5) .teamImage {
+    background-image: url('../media/images/christineYimImage.png');
+}
 
-  
+
