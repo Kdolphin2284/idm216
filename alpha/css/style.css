@@ -1,0 +1,7 @@
+marquee {
+    font-size: 60px;
+}
+marquee span {
+    font-size: 34px;
+    margin-left: 5px;
+}
