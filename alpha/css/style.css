@@ -26,13 +26,46 @@
     src: url(../fonts/RockSalt.woff);
     src: url(../fonts/RockSalt.woff2);
 }
+@font-face {
+    font-family: Caviar-Dreams;
+    src: url(../fonts/Caviar_Dreams_Bold.ttf);
+    src: url(../fonts/Caviar_Dreams_Bold.woff);
+    src: url(../fonts/Caviar_Dreams_Bold.woff2);
+}
+@font-face {
+    font-family: Freehand;
+    src: url(../fonts/Freehand-Regular.ttf);
+    src: url(../fonts/Freehand-Regular.woff);
+    src: url(../fonts/Freehand-Regular.woff2);
+}
+@font-face {
+    font-family: Playfair-Display;
+    src: url(../fonts/PlayfairDisplay.ttf);
+    src: url(../fonts/PlayfairDisplay.woff);
+    src: url(../fonts/PlayfairDisplay.woff2);
+}
+@font-face {
+    font-family: SFProDisplay-Regular;
+    src: url(../fonts/SFPRODISPLAYREGULAR.ttf);
+    src: url(../fonts/SFPRODISPLAYREGULAR.woff);
+    src: url(../fonts/SFPRODISPLAYREGULAR.woff2);
+}
+@font-face {
+    font-family: SFProDisplay-Bold;
+    src: url(../fonts/SFPRODISPLAYBOLD.ttf);
+    src: url(../fonts/SFPRODISPLAYBOLD.woff);
+    src: url(../fonts/SFPRODISPLAYBOLD.woff2);
+}
+
+
 h2 {
     display: inline-block;
     font-size: 28px;
     margin: 15px 0;
+    padding-bottom: 4px;
 }
 h3 {
-    font-size: 16px;
+    font-size: 15px;
     margin: 0 0 15px 0;
 }
 
@@ -45,6 +78,7 @@ h3 {
 .roleFlex h3:first-child {
     font-family: Raleway-SemiBold;
     color: #353535;
+    margin-right: 5px;
 }
 .roleFlex h3:last-child {
     font-family: Raleway-Regular;
@@ -67,17 +101,21 @@ h3 {
 }
 #teamInfo .col-1-5:nth-child(3) h2 {
     color: #FF4F4F;
+    font-family: Caviar-Dreams;
 }
 #teamInfo .col-1-5:nth-child(4) h2 {
     color: transparent;
     background: linear-gradient(-115deg, #FF8A00, #00B2FF);
     background-clip: text;
+    -webkit-background-clip: text;
     font-size: 28px;
     background-size: cover;
     background-position: center;
+    font-family: Freehand;
 }
 #teamInfo .col-1-5:nth-child(5) h2 {
     color: #40792B;
+    font-family: Playfair-Display;
 }
 
 
@@ -90,22 +128,47 @@ h3 {
     width: 20%;
 }
 
-
+ 
 
 /* /////////////////////// */
 /* ///// MARQUEE CSS ///// */
 /* /////////////////////// */
 
+#marqueeText::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(90deg, #E5C7F2, #C1B6EC, #889CE2);
+    padding-bottom: 8px;
+    margin-top: 38px;
+}
+#marqueeText {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 6px;
+}
 marquee {
     font-size: 60px;
     position: absolute;
-    top: 0;
+    top: 70px;
+    color: #000;
+    padding: 15px 0px;
+    font-family: SFProDisplay-Regular;
 }
-marquee span {
-    font-size: 34px;
+.copy {
+    font-size: 24px;
     margin-left: 5px;
 }
+.best {
+    font-family: SFProDisplay-Bold;
+}
+marquee .theBestTeam:not(:last-child) {
+    margin-right: 15px;
+}
 
+  
 
 /* //////////////////////// */
 /* ///// SPECIFIC CSS ///// */
@@ -114,31 +177,29 @@ marquee span {
 #teamInfo {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding: 0 50px;
+    margin: 149px 0;
 }
 #teamInfo .col-1-5:not(:last-child) {
-    margin-right: 55px;
+    margin-right: 25px;
 }
 #teamInfo {
-    max-width: 1400px;
+    max-width: 1200px;
     height: fit-content;
     width: 100%;
+    position: relative;
+    top: 55px;
 }
 body {
     display: flex;
     justify-content: center;
-} 
-body {
     min-height: 100vh;
     align-items: center;
+    background: #EDEDED
 }
 .roleFlex {
     display: flex;
-}
-.roleFlex h3:first-child {
-    margin-right: 5px;
-    border-right: 2px solid gray;
-    padding-right: 5px;
 }
 .teamImage {
     padding-bottom: 150%;
@@ -161,5 +222,142 @@ body {
 #teamInfo .col-1-5:nth-child(5) .teamImage {
     background-image: url('../media/images/christineYimImage.png');
 }
+.teamImage {
+    filter: saturate(0);
+}
+.teamImage:hover {
+    filter: saturate(1);
+}
+.teamImage {
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
 
 
+
+/* ///////////////////////// */
+/* ///// MEDIA QUERIES ///// */
+/* ///////////////////////// */
+
+@media only screen and (max-width: 1250px) {
+.roleFlex {
+    display: flex;
+    flex-direction: column;
+}
+h3 {
+    margin: 0 0 10px 0;
+}
+}
+@media only screen and (max-width: 1126px) {
+#teamInfo .col-1-5:first-child h2, #teamInfo .col-1-5:last-child h2 {
+    font-size: 26px;
+}
+}
+@media only screen and (max-width: 1062px) {
+#teamInfo .col-1-5:first-child h2, #teamInfo .col-1-5:nth-child(2) h2, #teamInfo .col-1-5:nth-child(3) h2, #teamInfo .col-1-5:last-child h2 {
+    font-size: 24px;
+}
+}
+@media only screen and (max-width: 1000px) {
+#teamInfo {
+    flex-wrap: wrap;
+    margin: 160px 0 160px 0;
+}
+#teamInfo .col-1-5 {
+    width: 22%;
+}
+#teamInfo .col-1-5:last-child {
+    margin-top: 45px;
+}
+#teamInfo .col-1-5:nth-child(4) {
+    margin-right: 0;
+}
+}
+@media only screen and (max-width: 931px) {
+#teamInfo .col-1-5:nth-child(4) {
+    margin-top: 45px;
+}
+#teamInfo .col-1-5 {
+    width: 26%;
+}
+#teamInfo .col-1-5:nth-child(4) {
+    margin-right: 25px;
+}
+#teamInfo .col-1-5:nth-child(3) {
+    margin-right: 0;
+}
+}
+@media only screen and (max-width: 767px) {
+#teamInfo .col-1-5 {
+    width: 46%;
+}
+#teamInfo .col-1-5:nth-child(2), #teamInfo .col-1-5:nth-child(4) {
+    margin-right: 0;
+}
+#teamInfo .col-1-5:nth-child(3) {
+    margin-right: 8%;
+    margin-top: 45px;
+}
+#teamInfo .col-1-5:first-child {
+    margin-right: 8%;
+}
+#teamInfo {
+    max-width: 500px;
+    justify-content: flex-start;
+
+}
+}
+@media only screen and (max-width: 550px) {
+#teamInfo .col-1-5 {
+    width: 70%;
+}
+#teamInfo {
+    justify-content: center;
+}
+#teamInfo .col-1-5:nth-child(3) {
+    margin-right: 0;
+}
+#teamInfo .col-1-5:first-child {
+    margin-right: 0;
+}
+#teamInfo .col-1-5:nth-child(2) {
+    margin-top: 45px;
+}
+#teamInfo .col-1-5:first-child h2, #teamInfo .col-1-5:nth-child(2) h2, #teamInfo .col-1-5:nth-child(3) h2, #teamInfo .col-1-5:last-child h2 {
+    font-size: 34px;
+}
+#teamInfo .col-1-5:nth-child(4) h2 {
+    font-size: 34px;
+}
+.roleFlex h3:first-child {
+    font-size: 20px;
+}
+.roleFlex h3:last-child {
+    font-size: 18px;
+}
+#teamInfo .col-1-5 a {
+    font-size: 16px;
+}
+#teamInfo .col-1-5:first-child h2, #teamInfo .col-1-5:nth-child(2) h2, #teamInfo .col-1-5:nth-child(3) h2, #teamInfo .col-1-5:last-child h2 {
+    font-size: 30px;
+}
+.roleFlex h3:first-child {
+    font-size: 18px;
+}
+.roleFlex h3:last-child {
+    font-size: 16px;
+}
+h2 {
+    margin-bottom: 10px;
+}
+}
+@media only screen and (max-width: 450px) {
+#teamInfo .col-1-5 {
+    width: 80%;
+}
+}
+@media only screen and (max-width: 350px) {
+#teamInfo .col-1-5 {
+    width: 100%;
+}
+}
