@@ -1,0 +1,94 @@
+/* ///////////////// */
+/* ///// FONTS ///// */
+/* ///////////////// */
+
+@font-face {
+    font-family: Raleway-Regular;
+    src: url(../fonts/Raleway-Regular.ttf);
+    src: url(../fonts/Raleway-Regular.woff);
+    src: url(../fonts/Raleway-Regular.woff2);
+}
+@font-face {
+    font-family: Raleway-SemiBold;
+    src: url(../fonts/Raleway-SemiBold.ttf);
+    src: url(../fonts/Raleway-SemiBold.woff);
+    src: url(../fonts/Raleway-SemiBold.woff2);
+}
+@font-face {
+    font-family: Staatliches;
+    src: url(../fonts/Staatliches-Regular.ttf);
+    src: url(../fonts/Staatliches-Regular.woff);
+    src: url(../fonts/Staatliches-Regular.woff2);
+}
+@font-face {
+    font-family: RockSalt;
+    src: url(../fonts/RockSalt.ttf);
+    src: url(../fonts/RockSalt.woff);
+    src: url(../fonts/RockSalt.woff2);
+}
+@font-face {
+    font-family: Caviar-Dreams;
+    src: url(../fonts/Caviar_Dreams_Bold.ttf);
+    src: url(../fonts/Caviar_Dreams_Bold.woff);
+    src: url(../fonts/Caviar_Dreams_Bold.woff2);
+}
+@font-face {
+    font-family: Freehand;
+    src: url(../fonts/Freehand-Regular.ttf);
+    src: url(../fonts/Freehand-Regular.woff);
+    src: url(../fonts/Freehand-Regular.woff2);
+}
+@font-face {
+    font-family: Playfair-Display;
+    src: url(../fonts/PlayfairDisplay.ttf);
+    src: url(../fonts/PlayfairDisplay.woff);
+    src: url(../fonts/PlayfairDisplay.woff2);
+}
+@font-face {
+    font-family: SFProDisplay-Regular;
+    src: url(../fonts/SFPRODISPLAYREGULAR.ttf);
+    src: url(../fonts/SFPRODISPLAYREGULAR.woff);
+    src: url(../fonts/SFPRODISPLAYREGULAR.woff2);
+}
+@font-face {
+    font-family: SFProDisplay-Bold;
+    src: url(../fonts/SFPRODISPLAYBOLD.ttf);
+    src: url(../fonts/SFPRODISPLAYBOLD.woff);
+    src: url(../fonts/SFPRODISPLAYBOLD.woff2);
+}
+
+
+
+/* /////////////////////// */
+/* ///// GENERAL CSS ///// */
+/* /////////////////////// */
+
+body {
+    background: #EDEDED;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#underConstruction h1 {
+    font-family: Raleway-Regular;
+    font-weight: 600;
+    font-size: 56px;
+}
+#underConstruction h3 {
+    font-family: SFProDisplay-Regular;
+    letter-spacing: 1px;
+}
+#underConstruction {
+    max-width: 900px;
+    padding: 0 50px;
+} 
+
+@media only screen and (max-width: 800px) {
+    #underConstruction h1 {
+        font-size: 40px;
+    }
+    #underConstruction h3 {
+        font-size: 16px;
+    }
+}
