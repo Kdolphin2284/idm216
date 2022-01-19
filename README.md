@@ -7,7 +7,7 @@ Github repository for the development of the Happy Sunshine food truck app by Te
 ## Editor
 - Visual Studio Code
 - Within editor, indent each subsequent line of code with one more tab than the line above, unless you are closing a block of code, or if the code you are writing should be in line with the code above
-```
+```html
 Example:
 
 <div id="exampleDiv">
