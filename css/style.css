@@ -58,6 +58,9 @@ body {
 /* ///// SPECIFIC CSS ///// */
 /* //////////////////////// */
 
+#header {
+    margin-bottom: 100px;
+}
 #flow {
     padding: 50px;
     border-radius: 20px;
@@ -95,7 +98,7 @@ body {
     flex-direction: row-reverse;
 }
 .imageFlow:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 11%;
 }
 #flow .imageFlow:first-child .imageFlowCol:nth-child(1) {
     background: url(../media/images/hs1.png);
@@ -109,5 +112,69 @@ body {
 #flow .imageFlow:first-child .imageFlowCol:nth-child(7) {
     background: url(../media/images/hs4.png);
 }
+#flow .imageFlow:nth-child(2) .imageFlowCol:nth-child(1) {
+    background: url(../media/images/hs5.png);
+}
+#flow .imageFlow:nth-child(2) .imageFlowCol:nth-child(3) {
+    background: url(../media/images/hs6.png);
+}
+#flow .imageFlow:nth-child(2) .imageFlowCol:nth-child(5) {
+    background: url(../media/images/hs7.png);
+}
+#flow .imageFlow:nth-child(2) .imageFlowCol:nth-child(7) {
+    background: url(../media/images/hs8.png);
+}
+#flow .imageFlow:nth-child(3) .imageFlowCol:nth-child(1) {
+    background: url(../media/images/hs9.png);
+}
+#flow .imageFlow:nth-child(3) .imageFlowCol:nth-child(3) {
+    background: url(../media/images/hs10.png);
+}
+#flow .imageFlow:nth-child(3) .imageFlowCol:nth-child(5) {
+    background: url(../media/images/hs11.png);
+}
+#flow .imageFlow:nth-child(3) .imageFlowCol:nth-child(7) {
+    background: url(../media/images/hs12.png);
+}
+#flow .imageFlow:nth-child(4) .imageFlowCol:nth-child(1) {
+    background: url(../media/images/hs13.png);
+}
+#flow .imageFlow:nth-child(4) .imageFlowCol:nth-child(3) {
+    background: url(../media/images/hs14.png);
+}
+#flow .imageFlow:nth-child(4) .imageFlowCol:nth-child(5) {
+    background: url(../media/images/hs15.png);
+}
+#flow .imageFlow:nth-child(4) .imageFlowCol:nth-child(7) {
+    background: url(../media/images/hs16.png);
+}
+#flow .imageFlow:nth-child(2n+1) .imageFlowCol:last-child::before {
+  position: absolute;
+  display: block;
+  content: url(../media/images/flowArrow.png);
+  bottom: -20%;
+  transform: translateX(50%) rotate(90deg);
+  right: 50%;
+}
+#flow .imageFlow:nth-child(2n+1) .imageFlowCol:last-child {
+  position: relative;
+}
+#flow .imageFlow:nth-child(2) .imageFlowCol:last-child::before {
+    position: absolute;
+    display: block;
+    content: url(../media/images/flowArrow.png);
+    bottom: -20%;
+    transform: translateX(50%) rotate(90deg);
+    right: 50%;
+}
+#flow .imageFlow:nth-child(2) .imageFlowCol:last-child {
+    position: relative;
+}
+#styleTile img, #persona img, #journeyMap img {
+    width: 100%;
+}
+#journeyMap {
+    margin-bottom: 140px;
+}
 
-  
+
