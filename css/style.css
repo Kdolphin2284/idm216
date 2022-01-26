@@ -54,6 +54,7 @@ body {
 }
 
 
+
 /* //////////////////////// */
 /* ///// SPECIFIC CSS ///// */
 /* //////////////////////// */
@@ -75,7 +76,9 @@ body {
     width: 16%;
     padding-bottom: 34.66%;
     background-position: center;
-    background-size: cover !important;
+    /* background-size: cover !important; */
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
 }
 .arrowCol {
     width: 12%;
@@ -178,6 +181,11 @@ body {
 }
 
 
+
+/* ///////////////////////// */
+/* ///// MEDIA QUERIES ///// */
+/* ///////////////////////// */
+
 @media only screen and (max-width: 1000px) {
 #flow .imageFlow:nth-child(2n+1) .imageFlowCol:last-child::before {
     transform: translateX(50%) rotate(90deg) scale(.65);
@@ -216,5 +224,54 @@ body {
 }
 .arrowCol {
     padding-bottom: 4%;
+}
+}
+
+@media only screen and (max-width: 550px) {
+body {
+    padding: 0;
+} 
+#header {
+    padding: 0 50px;
+}
+#flow {
+    border-radius: 0;
+}
+#styleTile img, #persona img {
+    background: #fff;
+}
+#journeyMap img {
+    background: #000;
+}
+h2 {
+    font-size: 36px !important;
+}
+h1 {
+    font-size: 30px !important;
+}
+.arrowCol {
+    display: none;
+}
+.imageFlowCol {
+    margin-bottom: 11%;
+}
+.imageFlowCol {
+    width: 75%;
+    padding-bottom: 162.57%;
+}
+.imageFlow .imageFlowCol:nth-child(n+5) {
+    margin-top: 0;
+}
+.imageFlow:not(:last-child) {
+    margin-bottom: 0;
+}
+}
+
+@media only screen and (max-width: 350px) {
+h2 {
+    font-size: 30px !important;
+}
+h1 {
+    font-size: 26px !important;
 }
 }
