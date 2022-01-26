@@ -1,0 +1,113 @@
+/* ///////////////// */
+/* ///// FONTS ///// */
+/* ///////////////// */
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(../fonts/Poppins-Regular.ttf);
+    src: url(../fonts/Poppins-Regular.woff);
+    src: url(../fonts/Poppins-Regular.woff2);
+}
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(../fonts/Poppins-Bold.ttf);
+    src: url(../fonts/Poppins-Bold.woff);
+    src: url(../fonts/Poppins-Bold.woff2);
+}
+
+
+
+/* //////////////////////// */
+/* ///// HEADINGS CSS ///// */
+/* //////////////////////// */
+
+h1 {
+    font-family: Poppins-Regular;
+    font-size: 36px !important;
+}
+h2 {
+    font-family: Poppins-Regular;
+    font-size: 48px !important;
+    text-align: center;
+}
+.boldHeading {
+    font-family: Poppins-Bold;
+}
+
+
+
+/* /////////////////////// */
+/* ///// GENERAL CSS ///// */
+/* /////////////////////// */
+
+* {
+    box-sizing: border-box;
+}
+html {
+    background: #FDF1E6;
+}
+body {
+    max-width: 1300px;
+    width: 100%;
+    margin: 50px auto !important;
+    padding: 0 50px;
+}
+
+
+/* //////////////////////// */
+/* ///// SPECIFIC CSS ///// */
+/* //////////////////////// */
+
+#flow {
+    padding: 50px;
+    border-radius: 20px;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imageFlowCol {
+    width: 16%;
+    padding-bottom: 34.66%;
+    background-position: center;
+    background-size: cover !important;
+}
+.arrowCol {
+    width: 12%;
+    background: url(../media/images/flowArrow.png);
+    background-size: contain;
+    background-position: center;
+    padding-bottom: 2%;
+    background-repeat: no-repeat;
+}
+#flow .imageFlow:nth-child(2n+2) .arrowCol {
+    transform: rotate(180deg);
+}
+.imageFlow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#flow .imageFlow:nth-child(2n + 2) {
+    flex-direction: row-reverse;
+}
+.imageFlow:not(:last-child) {
+    margin-bottom: 30px;
+}
+#flow .imageFlow:first-child .imageFlowCol:nth-child(1) {
+    background: url(../media/images/hs1.png);
+}
+#flow .imageFlow:first-child .imageFlowCol:nth-child(3) {
+    background: url(../media/images/hs2.png);
+}
+#flow .imageFlow:first-child .imageFlowCol:nth-child(5) {
+    background: url(../media/images/hs3.png);
+}
+#flow .imageFlow:first-child .imageFlowCol:nth-child(7) {
+    background: url(../media/images/hs4.png);
+}
+
+  
