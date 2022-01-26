@@ -178,3 +178,41 @@ body {
 }
 
 
+@media only screen and (max-width: 1000px) {
+#flow .imageFlow:nth-child(2n+1) .imageFlowCol:last-child::before {
+    transform: translateX(50%) rotate(90deg) scale(.65);
+}
+#flow .imageFlow:nth-child(2) .imageFlowCol:last-child::before {
+    transform: translateX(50%) rotate(90deg) scale(.65);
+} 
+}
+
+@media only screen and (max-width: 800px) {
+.imageFlowCol {
+    width: 38%;
+    padding-bottom: 82.2%;
+}
+.imageFlow {
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#flow .imageFlow:nth-child(2n+2) {
+    flex-direction: row;
+}
+#flow .imageFlow:nth-child(2n+2) .arrowCol {
+    transform: rotate(0deg);
+}
+#flow .imageFlow:nth-child(2n+1) .imageFlowCol:last-child::before {
+    display: none;
+}
+#flow .imageFlow:nth-child(2) .imageFlowCol:last-child::before {
+    display: none;
+}
+.imageFlow .imageFlowCol:nth-child(n+5) {
+    margin-top: 11%;
+}
+.imageFlow .arrowCol:nth-child(4) {
+    display: none;
+}
+  
+}
