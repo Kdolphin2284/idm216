@@ -73,8 +73,8 @@ body {
     align-items: center;
 }
 .imageFlowCol {
-    width: 16%;
-    padding-bottom: 34.66%;
+    width: 25%;
+    padding-bottom: 54.15625%;
     background-position: center;
     /* background-size: cover !important; */
     background-size: contain !important;
@@ -112,65 +112,139 @@ body {
 #flow .imageFlow:first-child .imageFlowCol:nth-child(5) {
     background: url(../media/images/hs3.png);
 }
-#flow .imageFlow:first-child .imageFlowCol:nth-child(7) {
+
+#flow .imageFlow:nth-child(2) .imageFlowCol:nth-child(1) {
     background: url(../media/images/hs4.png);
 }
-#flow .imageFlow:nth-child(2) .imageFlowCol:nth-child(1) {
+#flow .imageFlow:nth-child(2) .imageFlowCol:nth-child(3) {
     background: url(../media/images/hs5.png);
 }
-#flow .imageFlow:nth-child(2) .imageFlowCol:nth-child(3) {
+#flow .imageFlow:nth-child(2) .imageFlowCol:nth-child(5) {
     background: url(../media/images/hs6.png);
 }
-#flow .imageFlow:nth-child(2) .imageFlowCol:nth-child(5) {
+
+#flow .imageFlow:nth-child(3) .imageFlowCol:nth-child(1) {
     background: url(../media/images/hs7.png);
 }
-#flow .imageFlow:nth-child(2) .imageFlowCol:nth-child(7) {
+#flow .imageFlow:nth-child(3) .imageFlowCol:nth-child(3) {
     background: url(../media/images/hs8.png);
 }
-#flow .imageFlow:nth-child(3) .imageFlowCol:nth-child(1) {
+#flow .imageFlow:nth-child(3) .imageFlowCol:nth-child(5) {
     background: url(../media/images/hs9.png);
 }
-#flow .imageFlow:nth-child(3) .imageFlowCol:nth-child(3) {
+
+#flow .imageFlow:nth-child(4) .imageFlowCol:nth-child(1) {
     background: url(../media/images/hs10.png);
 }
-#flow .imageFlow:nth-child(3) .imageFlowCol:nth-child(5) {
+#flow .imageFlow:nth-child(4) .imageFlowCol:nth-child(3) {
     background: url(../media/images/hs11.png);
 }
-#flow .imageFlow:nth-child(3) .imageFlowCol:nth-child(7) {
+#flow .imageFlow:nth-child(4) .imageFlowCol:nth-child(5) {
     background: url(../media/images/hs12.png);
 }
-#flow .imageFlow:nth-child(4) .imageFlowCol:nth-child(1) {
+
+#flow .imageFlow:nth-child(5) .imageFlowCol:nth-child(1) {
     background: url(../media/images/hs13.png);
 }
-#flow .imageFlow:nth-child(4) .imageFlowCol:nth-child(3) {
+#flow .imageFlow:nth-child(5) .imageFlowCol:nth-child(3) {
     background: url(../media/images/hs14.png);
 }
-#flow .imageFlow:nth-child(4) .imageFlowCol:nth-child(5) {
+#flow .imageFlow:nth-child(5) .imageFlowCol:nth-child(5) {
     background: url(../media/images/hs15.png);
 }
-#flow .imageFlow:nth-child(4) .imageFlowCol:nth-child(7) {
+
+#flow .imageFlow:nth-child(6) .imageFlowCol:nth-child(1) {
     background: url(../media/images/hs16.png);
 }
+#flow .imageFlow:nth-child(6) .imageFlowCol:nth-child(3) {
+    background: url(../media/images/hs17.png);
+}
+#flow .imageFlow:nth-child(6) .imageFlowCol:nth-child(5) {
+    background: url(../media/images/hs18.png);
+}
+
+
+
+
+#flow .imageFlow:nth-child(7) .imageFlowCol:nth-child(1) {
+    background: url(../media/images/hs1.png);
+}
+#flow .imageFlow:nth-child(7) .imageFlowCol:nth-child(3) {
+    background: url(../media/images/hs2.png);
+}
+#flow .imageFlow:nth-child(7) .imageFlowCol:nth-child(5) {
+    background: url(../media/images/hs3.png);
+}
+#flow .imageFlow:nth-child(7) .imageFlowCol:nth-child(7) {
+    background: url(../media/images/hs4.png);
+}
+
+#flow .imageFlow:nth-child(8) .imageFlowCol:nth-child(1) {
+    background: url(../media/images/hs5.png);
+}
+#flow .imageFlow:nth-child(8) .imageFlowCol:nth-child(3) {
+    background: url(../media/images/hs6.png);
+}
+#flow .imageFlow:nth-child(8) .imageFlowCol:nth-child(5) {
+    background: url(../media/images/hs7.png);
+}
+#flow .imageFlow:nth-child(8) .imageFlowCol:nth-child(7) {
+    background: url(../media/images/hs8.png);
+}
+
+#flow .imageFlow:nth-child(9) .imageFlowCol:nth-child(1) {
+    background: url(../media/images/hs9.png);
+}
+#flow .imageFlow:nth-child(9) .imageFlowCol:nth-child(3) {
+    background: url(../media/images/hs10.png);
+}
+#flow .imageFlow:nth-child(9) .imageFlowCol:nth-child(5) {
+    background: url(../media/images/hs11.png);
+}
+#flow .imageFlow:nth-child(9) .imageFlowCol:nth-child(7) {
+    background: url(../media/images/hs12.png);
+}
+
+#flow .imageFlow:nth-child(10) .imageFlowCol:nth-child(1) {
+    background: url(../media/images/hs13.png);
+}
+#flow .imageFlow:nth-child(10) .imageFlowCol:nth-child(3) {
+    background: url(../media/images/hs14.png);
+}
+#flow .imageFlow:nth-child(10) .imageFlowCol:nth-child(5) {
+    background: url(../media/images/hs15.png);
+}
+#flow .imageFlow:nth-child(10) .imageFlowCol:nth-child(7) {
+    background: url(../media/images/hs16.png);
+}
+
+#flow .imageFlow:nth-child(11) .imageFlowCol:nth-child(1) {
+    background: url(../media/images/hs17.png);
+}
+#flow .imageFlow:nth-child(11) .imageFlowCol:nth-child(3) {
+    background: url(../media/images/hs18.png);
+}
+
 #flow .imageFlow:nth-child(2n+1) .imageFlowCol:last-child::before {
   position: absolute;
   display: block;
   content: url(../media/images/flowArrow.png);
-  bottom: -20%;
+  bottom: -13%;
   transform: translateX(50%) rotate(90deg);
   right: 50%;
 }
 #flow .imageFlow:nth-child(2n+1) .imageFlowCol:last-child {
   position: relative;
 }
-#flow .imageFlow:nth-child(2) .imageFlowCol:last-child::before {
+#flow .imageFlow:nth-child(2) .imageFlowCol:last-child::before, #flow .imageFlow:nth-child(4) .imageFlowCol:last-child::before {
     position: absolute;
     display: block;
     content: url(../media/images/flowArrow.png);
-    bottom: -20%;
+    bottom: -13%;
     transform: translateX(50%) rotate(90deg);
     right: 50%;
 }
-#flow .imageFlow:nth-child(2) .imageFlowCol:last-child {
+#flow .imageFlow:nth-child(2) .imageFlowCol:last-child, #flow .imageFlow:nth-child(4) .imageFlowCol:last-child {
     position: relative;
 }
 #styleTile img, #persona img, #journeyMap img {
@@ -179,20 +253,80 @@ body {
 #journeyMap {
     margin-bottom: 140px;
 }
+#flow .imageFlow:first-child .imageFlowCol:first-child {
+    position: relative;
+}
+#flow .imageFlow:first-child .imageFlowCol:first-child::before {
+    position: absolute;
+    content: 'This is a loading screen, it will go away after a few seconds';
+    font-family: Poppins-Regular;
+    display: block;
+    bottom: -9%;
+}
+.secondFlow {
+    display: none;
+}
+#flow .imageFlow:nth-child(6) {
+    margin: 0;
+}
 
+#flow .imageFlow:nth-child(7) .imageFlowCol:first-child {
+    position: relative;
+}
+#flow .imageFlow:nth-child(7) .imageFlowCol:first-child::before {
+    position: absolute;
+    content: 'This is a loading screen, it will go away after a few seconds';
+    font-family: Poppins-Regular;
+    display: block;
+    bottom: -9%;
+    font-size: 15px;
+}
 
 
 /* ///////////////////////// */
 /* ///// MEDIA QUERIES ///// */
 /* ///////////////////////// */
 
+@media only screen and (max-width: 1130px) {
+#flow .imageFlow:first-child .imageFlowCol:first-child::before {
+    font-size: 15px;
+}
+}
+
+@media only screen and (max-width: 1072px) {
+#flow .imageFlow:first-child .imageFlowCol:first-child::before {
+    bottom: -10%;
+}
+}
+
 @media only screen and (max-width: 1000px) {
 #flow .imageFlow:nth-child(2n+1) .imageFlowCol:last-child::before {
     transform: translateX(50%) rotate(90deg) scale(.65);
 }
-#flow .imageFlow:nth-child(2) .imageFlowCol:last-child::before {
+#flow .imageFlow:nth-child(2) .imageFlowCol:last-child::before, #flow .imageFlow:nth-child(4) .imageFlowCol:last-child::before {
     transform: translateX(50%) rotate(90deg) scale(.65);
-} 
+}
+#flow .imageFlow:nth-child(2n+1) .imageFlowCol:last-child::before, #flow .imageFlow:nth-child(2) .imageFlowCol:last-child::before {
+    bottom: -14%;
+}
+}
+
+@media only screen and (max-width:1200px) {
+#flow .imageFlow:first-child .imageFlowCol:first-child::before {
+    font-size: 14px;
+}
+}
+
+@media only screen and (max-width: 1030px) {
+#flow .imageFlow:first-child .imageFlowCol:first-child::before {
+    bottom: -14%;
+}
+}
+
+@media only screen and (max-width: 870px) {
+#flow .imageFlow:first-child .imageFlowCol:first-child::before {
+    font-size: 13px;
+}
 }
 
 @media only screen and (max-width: 800px) {
@@ -213,7 +347,7 @@ body {
 #flow .imageFlow:nth-child(2n+1) .imageFlowCol:last-child::before {
     display: none;
 }
-#flow .imageFlow:nth-child(2) .imageFlowCol:last-child::before {
+#flow .imageFlow:nth-child(2) .imageFlowCol:last-child::before, #flow .imageFlow:nth-child(4) .imageFlowCol:last-child::before {
     display: none;
 }
 .imageFlow .imageFlowCol:nth-child(n+5) {
@@ -224,6 +358,48 @@ body {
 }
 .arrowCol {
     padding-bottom: 4%;
+}
+.firstFlow {
+    display: none;
+}
+.secondFlow {
+    display: flex;
+}
+}
+
+@media only screen and (max-width: 790px) {
+#flow .imageFlow:nth-child(7) .imageFlowCol:first-child::before {
+    font-size: 14px;
+}
+#flow .imageFlow .imageFlowCol:nth-child(n+5) {
+    margin-top: 16%;
+}
+.imageFlow:not(:last-child) {
+    margin-bottom: 16%;
+}
+}
+
+@media only screen and (max-width: 740px) {
+#flow .imageFlow:nth-child(7) .imageFlowCol:first-child::before {
+    font-size: 13px;
+}
+}
+
+@media only screen and (max-width: 773px) {
+#flow .imageFlow:nth-child(7) .imageFlowCol:first-child::before {
+    font-size: 12px;
+}
+}
+
+@media only screen and (max-width: 659px) {
+#flow .imageFlow:nth-child(7) .imageFlowCol:first-child::before {
+    bottom: -15%;
+}
+}
+
+@media only screen and (max-width: 610px) {
+#flow .imageFlow:nth-child(7) .imageFlowCol:first-child::before {
+    bottom: -15%;
 }
 }
 
@@ -265,6 +441,42 @@ h1 {
 .imageFlow:not(:last-child) {
     margin-bottom: 0;
 }
+#flow .imageFlow .imageFlowCol:nth-child(n+5) {
+    margin-top: 0;
+}
+#flow .imageFlow:nth-child(7) .imageFlowCol:first-child {
+    margin-bottom: 22%;
+}
+
+#flow .imageFlow:nth-child(7) .imageFlowCol:first-child::before {
+    bottom: -7%;
+    font-size: 16px;
+}
+}
+
+@media only screen and (max-width: 450px) {
+#flow .imageFlow:nth-child(7) .imageFlowCol:first-child::before {
+    font-size: 15px;
+    bottom: -9%;
+}
+}
+
+@media only screen and (max-width: 390px) {
+#flow .imageFlow:nth-child(7) .imageFlowCol:first-child::before {
+    font-size: 14px;
+}
+}
+
+@media only screen and (max-width: 371px) {
+#flow .imageFlow:nth-child(7) .imageFlowCol:first-child::before {
+    font-size: 13px;
+}
+}
+
+@media only screen and (max-width: 371px) {
+#flow .imageFlow:nth-child(7) .imageFlowCol:first-child::before {
+    font-size: 12px;
+}
 }
 
 @media only screen and (max-width: 350px) {
@@ -273,5 +485,11 @@ h2 {
 }
 h1 {
     font-size: 26px !important;
+}
+}
+
+@media only screen and (max-width: 332px) {
+#flow .imageFlow:nth-child(7) .imageFlowCol:first-child::before {
+    font-size: 11px;
 }
 }
