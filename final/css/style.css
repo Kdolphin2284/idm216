@@ -83,12 +83,28 @@ body {
     max-width: 900px;
     padding: 0 50px;
 } 
-
+#underConstruction a {
+    text-decoration: none;
+    color: #fff;
+    font-family: SFProDisplay-Regular;
+    background: #000;
+    padding: 8px 12px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+    font-size: 18px;
+    display: inline-block;
+}
+#underConstruction a:hover {
+    color: #000;
+    background: transparent;
+}
+  
 @media only screen and (max-width: 800px) {
     #underConstruction h1 {
         font-size: 40px;
     }
     #underConstruction h3 {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
