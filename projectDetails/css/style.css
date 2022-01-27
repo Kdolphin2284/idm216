@@ -1,0 +1,277 @@
+/* ///////////////// */
+/* ///// FONTS ///// */
+/* ///////////////// */
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(../fonts/Poppins-Regular.ttf);
+    src: url(../fonts/Poppins-Regular.woff);
+    src: url(../fonts/Poppins-Regular.woff2);
+}
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(../fonts/Poppins-Bold.ttf);
+    src: url(../fonts/Poppins-Bold.woff);
+    src: url(../fonts/Poppins-Bold.woff2);
+}
+
+
+
+/* //////////////////////// */
+/* ///// HEADINGS CSS ///// */
+/* //////////////////////// */
+
+h1 {
+    font-family: Poppins-Regular;
+    font-size: 36px !important;
+}
+h2 {
+    font-family: Poppins-Regular;
+    font-size: 48px !important;
+    text-align: center;
+}
+.boldHeading {
+    font-family: Poppins-Bold;
+}
+
+
+
+/* /////////////////////// */
+/* ///// GENERAL CSS ///// */
+/* /////////////////////// */
+
+* {
+    box-sizing: border-box;
+}
+html {
+    background: #FDF1E6;
+}
+body {
+    max-width: 1300px;
+    width: 100%;
+    margin: 50px auto !important;
+    padding: 0 50px;
+}
+
+
+
+/* //////////////////////// */
+/* ///// SPECIFIC CSS ///// */
+/* //////////////////////// */
+
+#header {
+    margin-bottom: 100px;
+}
+#flow {
+    padding: 50px;
+    border-radius: 20px;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imageFlowCol {
+    width: 16%;
+    padding-bottom: 34.66%;
+    background-position: center;
+    /* background-size: cover !important; */
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+.arrowCol {
+    width: 12%;
+    background: url(../media/images/flowArrow.png);
+    background-size: contain;
+    background-position: center;
+    padding-bottom: 2%;
+    background-repeat: no-repeat;
+}
+#flow .imageFlow:nth-child(2n+2) .arrowCol {
+    transform: rotate(180deg);
+}
+.imageFlow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#flow .imageFlow:nth-child(2n + 2) {
+    flex-direction: row-reverse;
+}
+.imageFlow:not(:last-child) {
+    margin-bottom: 11%;
+}
+#flow .imageFlow:first-child .imageFlowCol:nth-child(1) {
+    background: url(../media/images/hs1.png);
+}
+#flow .imageFlow:first-child .imageFlowCol:nth-child(3) {
+    background: url(../media/images/hs2.png);
+}
+#flow .imageFlow:first-child .imageFlowCol:nth-child(5) {
+    background: url(../media/images/hs3.png);
+}
+#flow .imageFlow:first-child .imageFlowCol:nth-child(7) {
+    background: url(../media/images/hs4.png);
+}
+#flow .imageFlow:nth-child(2) .imageFlowCol:nth-child(1) {
+    background: url(../media/images/hs5.png);
+}
+#flow .imageFlow:nth-child(2) .imageFlowCol:nth-child(3) {
+    background: url(../media/images/hs6.png);
+}
+#flow .imageFlow:nth-child(2) .imageFlowCol:nth-child(5) {
+    background: url(../media/images/hs7.png);
+}
+#flow .imageFlow:nth-child(2) .imageFlowCol:nth-child(7) {
+    background: url(../media/images/hs8.png);
+}
+#flow .imageFlow:nth-child(3) .imageFlowCol:nth-child(1) {
+    background: url(../media/images/hs9.png);
+}
+#flow .imageFlow:nth-child(3) .imageFlowCol:nth-child(3) {
+    background: url(../media/images/hs10.png);
+}
+#flow .imageFlow:nth-child(3) .imageFlowCol:nth-child(5) {
+    background: url(../media/images/hs11.png);
+}
+#flow .imageFlow:nth-child(3) .imageFlowCol:nth-child(7) {
+    background: url(../media/images/hs12.png);
+}
+#flow .imageFlow:nth-child(4) .imageFlowCol:nth-child(1) {
+    background: url(../media/images/hs13.png);
+}
+#flow .imageFlow:nth-child(4) .imageFlowCol:nth-child(3) {
+    background: url(../media/images/hs14.png);
+}
+#flow .imageFlow:nth-child(4) .imageFlowCol:nth-child(5) {
+    background: url(../media/images/hs15.png);
+}
+#flow .imageFlow:nth-child(4) .imageFlowCol:nth-child(7) {
+    background: url(../media/images/hs16.png);
+}
+#flow .imageFlow:nth-child(2n+1) .imageFlowCol:last-child::before {
+  position: absolute;
+  display: block;
+  content: url(../media/images/flowArrow.png);
+  bottom: -20%;
+  transform: translateX(50%) rotate(90deg);
+  right: 50%;
+}
+#flow .imageFlow:nth-child(2n+1) .imageFlowCol:last-child {
+  position: relative;
+}
+#flow .imageFlow:nth-child(2) .imageFlowCol:last-child::before {
+    position: absolute;
+    display: block;
+    content: url(../media/images/flowArrow.png);
+    bottom: -20%;
+    transform: translateX(50%) rotate(90deg);
+    right: 50%;
+}
+#flow .imageFlow:nth-child(2) .imageFlowCol:last-child {
+    position: relative;
+}
+#styleTile img, #persona img, #journeyMap img {
+    width: 100%;
+}
+#journeyMap {
+    margin-bottom: 140px;
+}
+
+
+
+/* ///////////////////////// */
+/* ///// MEDIA QUERIES ///// */
+/* ///////////////////////// */
+
+@media only screen and (max-width: 1000px) {
+#flow .imageFlow:nth-child(2n+1) .imageFlowCol:last-child::before {
+    transform: translateX(50%) rotate(90deg) scale(.65);
+}
+#flow .imageFlow:nth-child(2) .imageFlowCol:last-child::before {
+    transform: translateX(50%) rotate(90deg) scale(.65);
+} 
+}
+
+@media only screen and (max-width: 800px) {
+.imageFlowCol {
+    width: 38%;
+    padding-bottom: 82.2%;
+}
+.imageFlow {
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#flow .imageFlow:nth-child(2n+2) {
+    flex-direction: row;
+}
+#flow .imageFlow:nth-child(2n+2) .arrowCol {
+    transform: rotate(0deg);
+}
+#flow .imageFlow:nth-child(2n+1) .imageFlowCol:last-child::before {
+    display: none;
+}
+#flow .imageFlow:nth-child(2) .imageFlowCol:last-child::before {
+    display: none;
+}
+.imageFlow .imageFlowCol:nth-child(n+5) {
+    margin-top: 11%;
+}
+.imageFlow .arrowCol:nth-child(4) {
+    display: none;
+}
+.arrowCol {
+    padding-bottom: 4%;
+}
+}
+
+@media only screen and (max-width: 550px) {
+body {
+    padding: 0;
+} 
+#header {
+    padding: 0 50px;
+}
+#flow {
+    border-radius: 0;
+}
+#styleTile img, #persona img {
+    background: #fff;
+}
+#journeyMap img {
+    background: #000;
+}
+h2 {
+    font-size: 36px !important;
+}
+h1 {
+    font-size: 30px !important;
+}
+.arrowCol {
+    display: none;
+}
+.imageFlowCol {
+    margin-bottom: 11%;
+}
+.imageFlowCol {
+    width: 75%;
+    padding-bottom: 162.57%;
+}
+.imageFlow .imageFlowCol:nth-child(n+5) {
+    margin-top: 0;
+}
+.imageFlow:not(:last-child) {
+    margin-bottom: 0;
+}
+}
+
+@media only screen and (max-width: 350px) {
+h2 {
+    font-size: 30px !important;
+}
+h1 {
+    font-size: 26px !important;
+}
+}
