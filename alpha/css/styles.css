@@ -46,7 +46,7 @@ input, textarea {
     padding: 10px 25px;
     border-radius: 10px;
 }
-/* .home_button {
+.home_button {
     background: tomato !important;
     text-decoration: none;
     color: #fff;
@@ -56,4 +56,4 @@ input, textarea {
 }
 #updateForm {
     padding: 50px;
-} */
+}
