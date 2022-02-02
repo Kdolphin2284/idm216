@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+#addForm {
+    padding: 50px !important;
+}
+.dbInfoAddForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.dbInfoAddForm field label {
+    flex-basis: 30%;
+}
+field {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+}
+input, textarea {
+    flex-basis: 70%;
+}
+.dbInfoAddForm field:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+/* ///// BUTTON CSS ///// */
+
+
+#category-links {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 50px;
+}
+#category-links a:not(:last-child) {
+    margin-bottom: 15px;
+}
+#category-links a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    background: #ffb94b;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+/* .home_button {
+    background: tomato !important;
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+#updateForm {
+    padding: 50px;
+} */
