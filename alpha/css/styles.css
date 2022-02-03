@@ -60,3 +60,6 @@ input, textarea {
 #individual_options {
     padding: 50px;
 }
+#addForm {
+    display: none;
+}
