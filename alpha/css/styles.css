@@ -586,9 +586,8 @@ a {
     align-items: center;
 }
 #cart-footer {
-    position: fixed;
     bottom: 50px;
-    margin: 0 auto;
+    margin: 50px auto;
     width: 100%;
 }
 #cart-footer p span {
