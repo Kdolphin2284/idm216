@@ -94,6 +94,12 @@ a {
 
 /* ///// GENERAL CSS ///// */
 
+#header-menu {
+    cursor: pointer;
+}
+#x {
+    cursor: pointer;
+}
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -162,6 +168,51 @@ a {
     justify-content: center;
     align-items: flex-start;
 }
+
+
+
+/* ///// NAV MENU CSS ///// */
+
+#mobile-nav header {
+    background: transparent;
+}
+#mobile-nav {
+    background: #FAF6F2;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    display: none;
+}
+#nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: calc(100vh - 166.7px);
+    margin-top: 30px;
+    align-items: flex-start;
+    padding: 0 50px;
+}
+#nav-links a:not(:last-child) {
+    margin-bottom: 25px;
+}
+#nav-links a {
+    text-decoration: none;
+    font-family: Poppins-Bold;
+    font-weight: 400;
+    font-size: 35px;
+}
+.x-menu {
+    position: relative;
+}
+.x-menu .hamburger-rectangle:first-child {
+    position: absolute;
+    transform: rotate(45deg);
+}
+.x-menu .hamburger-rectangle:last-child {
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
 
 
 /* ///// HOME CSS ///// */
@@ -289,7 +340,9 @@ a {
     width: 20px;
     margin-right: 10px;
 }
-
+#home-location a {
+    width: 185px;
+}
 
 
 /* ///// MENU CSS ///// */
@@ -456,9 +509,6 @@ a {
 
 /* ///// CART CSS ///// */
 
-
-/* Inline #2 | http://127.0.0.1:5500/alpha/pages/cart.html */
-
 .cart-food-item img {
     flex-basis: 20%;
 }
@@ -552,5 +602,154 @@ a {
 #cart-footer a {
     text-align: center;
 }
+
+
+
+
+/* ///// ORDER SUMMARY CSS ///// */
+
+#order-info .cart-items {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.edit-link a {
+    text-decoration: none;
+    font-family: Poppins-Regular;
+    font-size: 18px;
+}
+#pick-up-time {
+    padding: 0 50px;
+    margin-top: 30px;
+}
+.menu-header h2 {
+    text-align: center;
+}
+#pick-up-scroll button {
+    width: 48.5%;
+    padding: 10px;
+    border-radius: 25px;
+    height: 60px;
+    border: 2px solid #C4C4C4;
+    cursor: pointer;
+    box-shadow: 0 4px 3px 0px #c4c4c4;
+    background: #fff;
+    font-family: Poppins-Regular;
+}
+#pick-up-scroll {
+    display: flex;
+    width: 100%;
+}
+#pick-up-scroll button:not(:last-child) {
+    margin-right: 3%;
+}
+#pick-up-scroll {
+    width: 110%;
+    margin-top: 20px;
+}
+#pick-up-scroll button:focus {
+    box-shadow: none;
+    background: #f0d028;
+    border-color: #D4B616;
+}
+#order-info + #pick-up-time + #cart-footer .flex-col {
+    align-items: flex-start;
+}
+#order-info + #pick-up-time + #cart-footer .flex-col h5 + a {
+    text-align: left;
+    font-size: 18px;
+    margin: 8px 0;
+}
+#order-info + #pick-up-time + #cart-footer .flex-col h5 + a + p {
+    font-size: 20px;
+}
+
+
+
+/* ///// RECEIPT CSS ///// */
+
+#cart-footer.receipt-footer p {
+    margin-bottom: 15px;
+}
+#cart-footer.receipt-footer a {
+    margin-top: 25px;
+}
+#thanks-for-order {
+    text-align: center;
+    max-width: 260px;
+    margin: 0 auto 30px auto;
+}
+#thanks-for-order p {
+    font-size: 20px;
+}
+#thanks-for-order a {
+    font-size: 20px;
+}
+#thanks-for-order a img {
+    width: 18px;
+}
+#thanks-for-order + .cart-items {
+    position: relative;
+    padding-bottom: 30px;
+}
+#thanks-for-order + .cart-items::before {
+    bottom: 0;
+    right: 50px;
+    left: 50px;
+    padding-bottom: 3px;
+    background: #c4c4c4;
+    position: absolute;
+    content: '';
+    display: block;
+}
+
+
+
+/* ///// FAVORITE ORDERS ///// */
+
+.image-heart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.image-heart img:first-child {
+    margin-bottom: 45px;
+}
+.image-heart img:last-child {
+    width: 30px;
+}
+.favorite-order a {
+    text-align: center;
+    margin-top: 15px;
+}
+.favorite-order {
+    position: relative;
+    margin-top: 20px;
+}
+.favorite-order::before {
+    content: '10/25/21';
+    position: absolute;
+    top: -26px;
+    left: 0;
+    font-family: Poppins-Regular;
+}
+.favorite-order::after {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding-bottom: 3px;
+    background: #c4c4c4;
+    position: absolute;
+    content: '';
+    display: block;
+}
+.favorite-order {
+    padding-bottom: 30px;
+}
+
+  
+  
+   
   
   
