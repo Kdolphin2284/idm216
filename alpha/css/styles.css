@@ -748,8 +748,49 @@ a {
     padding-bottom: 30px;
 }
 
-  
-  
-   
+@media only screen and (max-width: 420px) {
+
+.header {
+    padding: 40px 30px;
+}
+.hero-text {
+    margin: 10px 0 10px 30px;
+}
+#home-info {
+    padding: 0 30px;
+}
+#home-location {
+    padding: 0 30px 30px 30px;
+}
+.menu-header {
+    padding: 0 30px 30px 30px;
+}
+.menu-item {
+    padding: 30px 30px;
+}
+.customization-category {
+    padding: 0 30px;
+}
+#order-customization-footer {
+    padding: 0 30px;
+}
+#cart-footer {
+    padding: 0 30px;
+}
+.cart-remove-edit-add::before {
+    right: 30px;
+    left: 30px;
+}
+.cart-remove-edit-add {
+    padding: 0 30px 20px 30px;
+}
+.cart-items {
+    padding: 0 30px;
+}
+#pick-up-time {
+    padding: 0 30px;
+    margin-top: 30px;
+}
+}
   
   
