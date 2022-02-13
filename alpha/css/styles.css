@@ -23,6 +23,26 @@ body {
     position: relative;
     background: #FAF6F2;
 }
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+.col-30 {
+    width: 30%;
+}
+.col-1-5 {
+    width: 20%;
+}
+button {
+    color: #000 !important;
+}
+button p {
+    color: #000 !important;
+}
 * {
     box-sizing: border-box;
 }
@@ -81,13 +101,13 @@ a {
 }
 
 .hamburger-rectangle {
-    padding: 3px 21px;
+    padding: 3px 19px;
     background: #F8A700;
     border-radius: 10px;
 }
 
 .hamburger-menu .hamburger-rectangle:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 7px;
 }
 
 
@@ -173,6 +193,10 @@ a {
 
 /* ///// NAV MENU CSS ///// */
 
+.onScreen {
+    right: 0 !important;
+    z-index: 1000 !important;
+}
 #mobile-nav header {
     background: transparent;
 }
@@ -181,7 +205,8 @@ a {
     position: absolute;
     z-index: 10;
     width: 100%;
-    display: none;
+    right: 100%;
+    transition: all .5s ease-in-out;
 }
 #nav-links {
     display: flex;
@@ -377,7 +402,13 @@ a {
 .menu-item:hover {
     background: #ffa84b2b;
 }
-
+.menu-item h3 {
+    font-size: 20px;
+}
+.menu-item img {
+    width: 45px;
+}
+  
 
 
 /* ///// Order Customization ///// */
@@ -595,13 +626,18 @@ a {
     font-weight: 400;
 }
 #cart-footer p {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 25px;
 }
 #cart-footer a {
     text-align: center;
 }
-
+#add-order, #subtract-order {
+    cursor: pointer;
+}
+#add-order:hover, #subtract-order:hover {
+    opacity: .5;
+}
 
 
 
@@ -618,7 +654,7 @@ a {
     font-size: 18px;
 }
 #pick-up-time {
-    padding: 0 50px;
+    padding: 0 0 0 50px;
     margin-top: 30px;
 }
 .menu-header h2 {
@@ -662,7 +698,10 @@ a {
 #order-info + #pick-up-time + #cart-footer .flex-col h5 + a + p {
     font-size: 20px;
 }
-
+.scroll-container {
+    width: 100%;
+    overflow-x: auto;
+}
 
 
 /* ///// RECEIPT CSS ///// */
@@ -679,10 +718,10 @@ a {
     margin: 0 auto 30px auto;
 }
 #thanks-for-order p {
-    font-size: 20px;
+    font-size: 18px;
 }
 #thanks-for-order a {
-    font-size: 20px;
+    font-size: 18px;
 }
 #thanks-for-order a img {
     width: 18px;
@@ -747,6 +786,106 @@ a {
     padding-bottom: 30px;
 }
 
+
+
+/* ///// TRACKING CSS ///// */
+
+#tracking-animation {
+    width: 100%;
+    padding: 50px 50px 30px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tracking-titles {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.col-30 p {
+    max-width: 90px;
+}
+#tracking-titles .col-30 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tracking-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+#tracking-info {
+    padding: 0 50px;
+}
+#tracking-images .col-1-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tracking-images .col-30 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tracking-times {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tracking-times p {
+    font-size: 20px;
+    text-align: center;
+}
+#order-ready {
+    background: #fff;
+    padding: 20px 50px 30px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+#order-ready p {
+    padding-bottom: 20px;
+    font-size: 20px;
+    max-width: 250px;
+}
+#order-ready {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+#tracking-page::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    content: '';
+    background: rgba(0,0,0,.4);
+}
+.black-bar {
+  padding: 3px 35px;
+  background: #000;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+  
+
+
+@media only screen and (max-width: 500px) {
+h1 {
+    font-size: 36px !important;
+}
+}
+
 @media only screen and (max-width: 420px) {
 
 .header {
@@ -787,8 +926,23 @@ a {
     padding: 0 30px;
 }
 #pick-up-time {
-    padding: 0 30px;
+    padding: 0 0 0 30px;
     margin-top: 30px;
+}
+#thanks-for-order p {
+    font-size: 16px;
+}
+#thanks-for-order a {
+    font-size: 16px;
+}
+#thanks-for-order {
+    max-width: 270px;
+} 
+#order-ready {
+    padding: 20px 30px 30px 30px;
+}
+#tracking-info {
+    padding: 0 30px;
 }
 }
   
