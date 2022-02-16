@@ -673,14 +673,14 @@ a {
 }
 #pick-up-scroll {
     display: flex;
-    width: 100%;
 }
 #pick-up-scroll button:not(:last-child) {
     margin-right: 3%;
 }
 #pick-up-scroll {
-    width: 110%;
+    width: 150%;
     margin-top: 20px;
+    padding-bottom: 15px;
 }
 #pick-up-scroll button:focus {
     box-shadow: none;
@@ -880,6 +880,24 @@ a {
   
 
 
+/* ///// NO CART CSS ///// */
+
+#nothing-bird {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#nothing-bird h3 {
+    font-family: Poppins-Regular;
+    padding-bottom: 50px;
+    font-size: 26px;
+}
+  
+  
+
+
 @media only screen and (max-width: 500px) {
 h1 {
     font-size: 36px !important;
@@ -943,6 +961,16 @@ h1 {
 }
 #tracking-info {
     padding: 0 30px;
+}
+#thanks-for-order + .cart-items::before {
+    right: 30px;
+    left: 30px;
+}
+#nothing-bird {
+    padding: 30px;
+}
+#nothing-bird h3 {
+    font-size: 24px;
 }
 }
   
