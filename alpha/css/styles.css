@@ -19,7 +19,7 @@
     src: url(../fonts/Poppins-Bold.woff2);
 }
 input {
-    font-family: Poppins-Regular;
+    font-family: Poppins-Regular !important;
 }
 body {
     width: 100%;
