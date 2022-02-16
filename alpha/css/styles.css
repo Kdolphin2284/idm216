@@ -18,6 +18,9 @@
     src: url(../fonts/Poppins-Bold.woff);
     src: url(../fonts/Poppins-Bold.woff2);
 }
+input {
+    font-family: Poppins-Regular;
+}
 body {
     width: 100%;
     position: relative;
