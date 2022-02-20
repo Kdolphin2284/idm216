@@ -18,21 +18,21 @@
                     <img src="media/images/x.svg">
                 </div>
                 <div class="hs-logo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
                     </a>
                 </div>
                 <div class="cart">
-                    <a href="pages/cartWithNothing.html">
+                    <a href="pages/cartWithNothing.php">
                         <img src="media/images/happy-sunshine-cart.svg" alt="Happy Sunshine Cart">
                     </a>
                 </div>
             </header>
             <div id="nav-links">
-                <a href="index.html">Home</a>
-                <a href="pages/menu.html">Menu</a>
-                <a href="pages/favoriteOrders.html">Favorites</a>
-                <a href="pages/recentOrders.html">Recents</a>
+                <a href="index.php">Home</a>
+                <a href="pages/menu.php">Menu</a>
+                <a href="pages/favoriteOrders.php">Favorites</a>
+                <a href="pages/recentOrders.php">Recents</a>
                 <a href="#">Profile</a>
             </div>
         </nav>
@@ -44,12 +44,12 @@
                     <div class="hamburger-rectangle"></div>
                 </div>
                 <div class="hs-logo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
                     </a>
                 </div>
                 <div class="cart">
-                    <a href="pages/cartWithNothing.html">
+                    <a href="pages/cartWithNothing.php">
                         <img src="media/images/happy-sunshine-cart.svg" alt="Happy Sunshine Cart">
                     </a>
                 </div>
@@ -75,20 +75,20 @@
             <div class="flex-row-wrap">
                 <div class="col-1-1">
                     <div class="col-1-2">
-                        <a href="pages/recentOrders.html" class="large-yellow-btn flex-row">
+                        <a href="pages/recentOrders.php" class="large-yellow-btn flex-row">
                             <img src="media/images/happy-sunshine-recent.svg">
                             <p>Recents</p>
                         </a>
                     </div>
                     <div class="col-1-2">
-                        <a href="pages/favoriteOrders.html" class="large-yellow-btn flex-row">
+                        <a href="pages/favoriteOrders.php" class="large-yellow-btn flex-row">
                             <img src="media/images/happy-sunshine-heart.svg">
                             <p>Favorites</p>
                         </a>
                     </div>
                 </div>
                 <div class="col-1-1">
-                    <a href="pages/menu.html" class="large-yellow-btn flex-row start-order">
+                    <a href="pages/menu.php" class="large-yellow-btn flex-row start-order">
                         <img src="media/images/happy-sunshine-start-order.svg">
                         <p>Start Order</p>
                     </a>

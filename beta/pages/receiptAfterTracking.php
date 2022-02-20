@@ -18,21 +18,21 @@
                     <img src="../media/images/x.svg">
                 </div>
                 <div class="hs-logo">
-                    <a href="../index.html">
+                    <a href="../index.php">
                         <img src="../media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
                     </a>
                 </div>
                 <div class="cart">
-                    <a href="cartWithNothing.html">
+                    <a href="cartWithNothing.php">
                         <img src="../media/images/happy-sunshine-cart.svg" alt="Happy Sunshine Logo">
                     </a>
                 </div>
             </header>
             <div id="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="favoriteOrders.html">Favorites</a>
-                <a href="recentOrders.html">Recents</a>
+                <a href="../index.php">Home</a>
+                <a href="menu.php">Menu</a>
+                <a href="favoriteOrders.php">Favorites</a>
+                <a href="recentOrders.php">Recents</a>
                 <a href="#">Profile</a>
             </div>
         </nav>
@@ -43,12 +43,12 @@
                 <div class="hamburger-rectangle"></div>
             </div>
             <div class="hs-logo">
-                <a href="../index.html">
+                <a href="../index.php">
                     <img src="../media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
                 </a>
             </div>
             <div class="cart">
-                <a href="cartWithNothing.html">
+                <a href="cartWithNothing.php">
                     <img src="../media/images/happy-sunshine-cart.svg" alt="Happy Sunshine Logo">
                 </a>
             </div>
@@ -56,7 +56,7 @@
         <section id="cart-info">
             <div class="menu-header flex-row">
                 <div class="col-1-3">
-                    <a href="../index.html" class="flex-row">
+                    <a href="../index.php" class="flex-row">
                         <img src="../media/images/general-menu-arrow.svg" alt="Menu Arrow">
                         <p>Home</p>
                     </a>
@@ -85,7 +85,7 @@
                 <p>Name: <span>John Smith</span></p>
                 <p>Pick-up time: <span>1:15pm</span></p>
                 <p>Total: <span>$5.00 Cash Only</span></p>
-                <a href="../index.html" class="large-yellow-btn">Back to Home</a>
+                <a href="../index.php" class="large-yellow-btn">Back to Home</a>
             </div>
         </section>
         <script src="../scripts/script.js" async defer></script>

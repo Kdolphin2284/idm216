@@ -25,10 +25,10 @@
                 </div>
             </header>
             <div id="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="favoriteOrders.html">Favorites</a>
-                <a href="recentOrders.html">Recents</a>
+                <a href="../index.php">Home</a>
+                <a href="menu.php">Menu</a>
+                <a href="favoriteOrders.php">Favorites</a>
+                <a href="recentOrders.php">Recents</a>
                 <a href="#">Profile</a>
             </div>
         </nav>
@@ -47,7 +47,7 @@
         </header>
         <div class="menu-header flex-row">
             <div class="col-1-3">
-                <a href="menu.html" class="flex-row">
+                <a href="menu.php" class="flex-row">
                     <img src="../media/images/general-menu-arrow.svg" alt="Happy Sunshine Logo">
                     <p>Receipt</p>
                 </a>
@@ -112,7 +112,7 @@
             <p>Your order is ready!
                 Please show the receipt
                 when picking up order.</p>
-                <a class="large-yellow-btn" href="receiptAfterTracking.html">View Receipt</a>
+                <a class="large-yellow-btn" href="receiptAfterTracking.php">View Receipt</a>
         </section>
         <script src="../scripts/script.js" async defer></script>
     </body>

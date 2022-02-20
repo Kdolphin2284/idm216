@@ -18,21 +18,21 @@
                     <img src="../media/images/x.svg">
                 </div>
                 <div class="hs-logo">
-                    <a href="../index.html">
+                    <a href="../index.php">
                         <img src="../media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
                     </a>
                 </div>
                 <div class="cart">
-                    <a href="cartWithNothing.html">
+                    <a href="cartWithNothing.php">
                         <img src="../media/images/happy-sunshine-cart.svg" alt="Happy Sunshine Logo">
                     </a>
                 </div>
             </header>
             <div id="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="favoriteOrders.html">Favorites</a>
-                <a href="recentOrders.html">Recents</a>
+                <a href="../index.php">Home</a>
+                <a href="menu.php">Menu</a>
+                <a href="favoriteOrders.php">Favorites</a>
+                <a href="recentOrders.php">Recents</a>
                 <a href="#">Profile</a>
             </div>
         </nav>
@@ -43,12 +43,12 @@
                 <div class="hamburger-rectangle"></div>
             </div>
             <div class="hs-logo">
-                <a href="../index.html">
+                <a href="../index.php">
                     <img src="../media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
                 </a>
             </div>
             <div class="cart">
-                <a href="cartWithNothing.html">
+                <a href="cartWithNothing.php">
                     <img src="../media/images/happy-sunshine-cart.svg" alt="Happy Sunshine Logo">
                 </a>
             </div>
@@ -56,7 +56,7 @@
         <section id="general-menu">
             <div class="menu-header flex-row">
                 <div class="col-1-3">
-                    <a href="../index.html" class="flex-row">
+                    <a href="../index.php" class="flex-row">
                         <img src="../media/images/general-menu-arrow.svg" alt="Happy Sunshine Logo">
                         <p>Home</p>
                     </a>
@@ -67,7 +67,7 @@
                 <div class="col-1-3"></div>
             </div>
             <div id="general-menu-selection">
-                <a href="orderCustomization.html" class="menu-item col-1-1 flex-row">
+                <a href="orderCustomization.php" class="menu-item col-1-1 flex-row">
                     <img src="../media/images/breakfast-sandwich-logo.svg">
                     <h3>Breakfast Sandwiches</h3>
                 </a>

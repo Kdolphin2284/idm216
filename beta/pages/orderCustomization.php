@@ -18,21 +18,21 @@
                     <img src="../media/images/x.svg">
                 </div>
                 <div class="hs-logo">
-                    <a href="../index.html">
+                    <a href="../index.php">
                         <img src="../media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
                     </a>
                 </div>
                 <div class="cart">
-                    <a href="cartWithNothing.html">
+                    <a href="cartWithNothing.php">
                         <img src="../media/images/happy-sunshine-cart.svg" alt="Happy Sunshine Logo">
                     </a>
                 </div>
             </header>
             <div id="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="favoriteOrders.html">Favorites</a>
-                <a href="recentOrders.html">Recents</a>
+                <a href="../index.php">Home</a>
+                <a href="menu.php">Menu</a>
+                <a href="favoriteOrders.php">Favorites</a>
+                <a href="recentOrders.php">Recents</a>
                 <a href="#">Profile</a>
             </div>
         </nav>
@@ -43,19 +43,19 @@
                 <div class="hamburger-rectangle"></div>
             </div>
             <div class="hs-logo">
-                <a href="../index.html">
+                <a href="../index.php">
                     <img src="../media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
                 </a>
             </div>
             <div class="cart">
-                <a href="cartWithNothing.html">
+                <a href="cartWithNothing.php">
                     <img src="../media/images/happy-sunshine-cart.svg">
                 </a>
             </div>
         </header>
         <div class="menu-header flex-row">
             <div class="col-1-3">
-                <a href="menu.html" class="flex-row">
+                <a href="menu.php" class="flex-row">
                     <img src="../media/images/general-menu-arrow.svg" alt="Happy Sunshine Logo">
                     <p>Menu</p>
                 </a>
@@ -178,7 +178,7 @@
                 <p><span class="bold-text">Total: $4.00</span> Cash Only</p>
             </div>
             <div class="col-1-1">
-                <a href="cart.html" class="large-yellow-btn">Add to Cart</a>
+                <a href="cart.php" class="large-yellow-btn">Add to Cart</a>
             </div>
         </section>
         <script src="../scripts/script.js" async defer></script>

@@ -18,7 +18,7 @@
                     <img src="../media/images/x.svg">
                 </div>
                 <div class="hs-logo">
-                    <a href="../index.html">
+                    <a href="../index.php">
                         <img src="../media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
                     </a>
                 </div>
@@ -27,10 +27,10 @@
                 </div>
             </header>
             <div id="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="favoriteOrders.html">Favorites</a>
-                <a href="recentOrders.html">Recents</a>
+                <a href="../index.php">Home</a>
+                <a href="menu.php">Menu</a>
+                <a href="favoriteOrders.php">Favorites</a>
+                <a href="recentOrders.php">Recents</a>
                 <a href="#">Profile</a>
             </div>
         </nav>
@@ -41,7 +41,7 @@
                 <div class="hamburger-rectangle"></div>
             </div>
             <div class="hs-logo">
-                <a href="../index.html">
+                <a href="../index.php">
                     <img src="../media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
                 </a>
             </div>
@@ -52,7 +52,7 @@
         <section id="cart-info">
             <div class="menu-header flex-row">
                 <div class="col-1-3">
-                    <a href="menu.html" class="flex-row">
+                    <a href="menu.php" class="flex-row">
                         <img src="../media/images/general-menu-arrow.svg" alt="Happy Sunshine Arrow">
                         <p>Menu</p>
                     </a>
@@ -92,7 +92,7 @@
         <section id="cart-footer">
             <div class="flex-col">
                 <p>Total: $5.00 <span>Cash Only</span></p>
-                <a href="orderSummary.html" class="large-yellow-btn">Go to Order Summary</a>
+                <a href="orderSummary.php" class="large-yellow-btn">Go to Order Summary</a>
             </div>
         </section>
         <script src="../scripts/script.js" async defer></script>
