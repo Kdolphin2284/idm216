@@ -65,31 +65,24 @@
             <div class="cart-items flex-col">
                 <div class="cart-food-item flex-row-wrap favorite-order">
                     <div class="image-heart">
-                        <img src="../media/images/small-breakfast-sandwich.png" alt="Small breakfast Sandwich">
-                        <img src="../media/images/happy-sunshine-heart-hollow.svg" alt="Small breakfast Sandwich">
-                    </div>
-                    <div class="cart-food-item-info flex-col">
-                        <h5>Breakfast Sandwich</h5>
-                        <p>Bagel, Bacon, Egg, Cheese, Ketchup, Salt, Pepper</p>
-                        <p>Price: <span>$5.00</span></p>
-                        <a href="#" class="large-yellow-btn">Add to Cart</a>
-                    </div>
-                </div>
-                <!-- <div class="cart-food-item flex-row-wrap favorite-order">
-                    <div class="image-heart">
-                        <img src="../media/images/small-breakfast-sandwich.png" alt="Small breakfast Sandwich">
-                        
-                    </div>
-                    <div class="cart-food-item-info flex-col">
-                        <img src="../media/images/happy-sunshine-heart-hollow.svg" alt="Small breakfast Sandwich">
+                        <div class="recent-favorite-image">
+                            <img src="../media/images/happy-sunshine-breakfast-sandwich.png" alt="Small breakfast Sandwich">
+                        </div>
                         <div class="recent-favorite">
                             <h5>Breakfast Sandwich</h5>
                             <p>Bagel, Bacon, Egg, Cheese, Ketchup, Salt, Pepper</p>
                             <p>Price: <span>$5.00</span></p>
+                        </div>
+                    </div>
+                    <div class="cart-food-item-info flex-col">
+                        <div class="fb-30">
+                            <img src="../media/images/happy-sunshine-heart-hollow.svg" alt="Small breakfast Sandwich">
+                        </div>
+                        <div class="recent-favorite-a-space">
                             <a href="#" class="large-yellow-btn">Add to Cart</a>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </section>
         <script src="../scripts/script.js" async defer></script>

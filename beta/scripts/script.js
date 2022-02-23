@@ -57,3 +57,52 @@ x.addEventListener("click", function(){
         enableScroll();
     }
 })
+
+// Single Button Select - Base
+
+function btnToggle(evt) {
+
+  select = document.getElementsByClassName("base");
+  for (i = 0; i < select.length; i++) {
+    select[i].className = select[i].className.replace(" active", "");
+  }
+
+  evt.currentTarget.className += " active";
+} 
+
+// Single Button Select - Protein
+
+function btnToggle2(evt) {
+
+  select2 = document.getElementsByClassName("protein");
+  for (i = 0; i < select2.length; i++) {
+    select2[i].className = select2[i].className.replace(" active", "");
+  }
+
+  evt.currentTarget.className += " active";
+} 
+
+// Multi Mutton Select - Toppings
+
+function btnMulti(evt) {
+  evt.currentTarget.classList.toggle('check-btn');
+  if(!evt.currentTarget.classList.contains('check-btn')) {
+    evt.currentTarget.getElementsByTagName("img")[0].style.display = "none";
+    evt.currentTarget.classList.add('font-18');
+  } else {
+    evt.currentTarget.getElementsByTagName("img")[0].style.display = "block";
+    evt.currentTarget.classList.remove('font-18');
+  }
+}
+
+// Multi Mutton Select - More
+
+function btnMulti2(evt) {
+  if(!evt.currentTarget.classList.contains('active')) {
+    evt.currentTarget.classList.add('active');
+  } else {
+    evt.currentTarget.classList.remove('active');
+  }
+}
+
+

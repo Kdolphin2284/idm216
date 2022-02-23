@@ -2,10 +2,14 @@
 
 <?php
 
-    // Header + Database Connection
-    // include 'includes/db.php';
+    // Db Connection
+    include 'includes/db.php';
 
-?>
+    // Select Information from MySQL
+    $sql = "SELECT * FROM happy_sunshine_food";
+    $result = mysqli_query($conn, $sql);
+
+    ?>
 
 <html>
     <head>
@@ -106,6 +110,32 @@
                     </a>
                 </div>
             </div>
+        </section>
+        <div class="col-1-1 single-button">
+                <a href="pages/menu.php" class="large-yellow-btn">Start Order</a>
+        </div>
+        <section id="home-menu">
+        
+        <?php
+                        while($row = mysqli_fetch_array($result)){
+                            $category = htmlspecialchars_decode($row['category'], ENT_QUOTES);
+                            $id = $row['id'];
+
+                            // Slugifying each category
+                            // $lower_category = strtolower($category);
+                            $min_category = str_replace(' ', '-', $category);
+
+                            $icon_origin = strtok($category, " ");
+                            $icon_key = strtolower($icon_origin);
+
+                            // Echo out a link for every single category page
+                            echo "<a class='home-menu-link' href='pages/individual.php?id=" . $id ."'>
+                            <img src='media/images/" . $icon_key . "-logo.svg'>
+                            <h3>$category</h3>
+                            </a>";
+                        }
+                    ?>
+
         </section>
         <section id="home-location">
             <div class="flex-row">

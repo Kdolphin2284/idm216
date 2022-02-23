@@ -95,52 +95,6 @@
                             </a>";
                         }
                     ?> 
-            <!-- <div id="general-menu-selection">
-                <a href="orderCustomization.php" class="menu-item col-1-1 flex-row">
-                    <img src="../media/images/breakfast-sandwich-logo.svg">
-                    <h3>Breakfast Sandwiches</h3>
-                </a>
-                <div class="menu-item col-1-1 flex-row">
-                    <img src="../media/images/french-toast-logo.svg">
-                    <h3>French Toast</h3>
-                </div>
-                <div class="menu-item col-1-1 flex-row">
-                    <img src="../media/images/cheesesteak-logo.svg">
-                    <h3>Cheesesteaks</h3>
-                </div>
-                <div class="menu-item col-1-1 flex-row">
-                    <img src="../media/images/lunch-sandwiches-logo.svg">
-                    <h3>Lunch Sandwiches</h3>
-                </div>
-                <div class="menu-item col-1-1 flex-row">
-                    <img src="../media/images/hoagies-logo.svg">
-                    <h3>Club Sandwiches</h3>
-                </div>
-                <div class="menu-item col-1-1 flex-row">
-                    <img src="../media/images/hot-dog-sausage-logo.svg">
-                    <h3>Hot Dog & Sausage</h3>
-                </div>
-                <div class="menu-item col-1-1 flex-row">
-                    <img src="../media/images/hoagies-logo.svg">
-                    <h3>Hoagies</h3>
-                </div>
-                <div class="menu-item col-1-1 flex-row">
-                    <img src="../media/images/burgers-logo.svg">
-                    <h3>Burgers</h3>
-                </div>
-                <div class="menu-item col-1-1 flex-row">
-                    <img src="../media/images/grilled-cheese-logo.svg">
-                    <h3>Grilled Cheese</h3>
-                </div>
-                <div class="menu-item col-1-1 flex-row">
-                    <img src="../media/images/side-orders-logo.svg">
-                    <h3>Side Orders</h3>
-                </div>
-                <div class="menu-item col-1-1 flex-row">
-                    <img src="../media/images/drinks-logo.svg">
-                    <h3>Drinks</h3>
-                </div>
-            </div> -->
         </section>
         <script src="../scripts/script.js" async defer></script>
     </body>

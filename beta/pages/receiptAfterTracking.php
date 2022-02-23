@@ -71,7 +71,7 @@
             </div>
             <div class="cart-items flex-col">
                 <div class="cart-food-item flex-row-wrap">
-                    <img src="../media/images/small-breakfast-sandwich.png" alt="Small Breakfast Sandwich">
+                    <img src="../media/images/happy-sunshine-breakfast-sandwich.png" alt="Small Breakfast Sandwich">
                     <div class="cart-food-item-info flex-col">
                         <h5>Breakfast Sandwich</h5>
                         <p>Bagel, Bacon, Egg, Cheese, Ketchup, Salt, Pepper</p>

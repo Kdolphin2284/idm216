@@ -131,7 +131,7 @@ a {
 .food-hero {
     height: 300px;
     background: url(../media/images/happy-sunshine-breakfast-sandwich.png);
-    background-position: top;
+    background-position: top !important;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -384,6 +384,57 @@ a {
 #home-bird img {
     width: 175px;
 }
+.home-menu-link h3 {
+    color: #000;
+}
+.home-menu-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 150px;
+    text-decoration: none;
+    background: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    height: 120px;
+    width: 100%;
+}
+.home-menu-link h3 {
+    font-size: 16px;
+}
+.home-menu-link img {
+    max-width: 45px;
+    margin-bottom: 10px;
+}
+#home-menu {
+    max-width: 700px;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px auto;
+}
+.home-menu-link:not(:last-child) {
+    margin-right: 25px;
+}
+.home-menu-link:not(:nth-child(n+8)) {
+    margin-bottom: 25px;
+}
+.home-menu-link:nth-child(5), .home-menu-link:nth-child(6), .home-menu-link:nth-child(7) {
+    margin-right: 30px;
+}
+.col-1-1.single-button {
+    max-width: 300px;
+    margin: 50px auto 0 auto;
+}
+.col-1-1.single-button a {
+    text-align: center;
+    display: none;
+}
+
   
 
 
@@ -483,11 +534,11 @@ a {
 .customization-options button p:nth-child(2) {
     font-size: 14px;
 }
-.customization-options button:focus {
+/* .customization-options button:focus {
     box-shadow: none;
     background: #f0d028;
     border-color: #D4B616;
-}
+} */
 .check-btn {
     display: flex;
     justify-content: center;
@@ -505,21 +556,21 @@ a {
     border-color: #D4B616 !important;
     box-shadow: none !important;
 }
-.check-btn:focus img {
+/* .check-btn:focus img {
     display: none;
     border-color: #c4c4c4;
-}
-.check-btn:focus {
+} */
+/* .check-btn:focus {
     background: #fff !important;
     border-color: #c4c4c4 !important;
     box-shadow: 0 4px 3px 0px #c4c4c4 !important;
-}
+} */
 #order-customization-footer {
     width: 100%;
     padding: 0 50px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    padding-bottom: 30px !important;
 }
 .add-note label {
     font-family: Poppins-Bold;
@@ -551,6 +602,71 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.font-18 p {
+    font-size: 18px !important;
+}
+#confirm-modal {
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px 50px;
+    justify-content: center;
+    align-items: center;
+}
+#confirm-modal .col-1-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 450px;
+}
+#confirm-modal .col-1-1 .col-1-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#confirm-modal .col-1-1:nth-child(2) .col-1-2:not(:last-child) {
+    margin-right: 15px;
+}
+#confirm-modal .col-1-1:nth-child(2) {
+    margin-top: 20px;
+}
+.relative-modal {
+    position: relative;
+}
+.relative-modal::before {
+    position: absolute;
+    content: '';
+    display: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 1000;
+    transition: all .5s ease-in-out;
+}
+#confirm-modal {
+    position: absolute;
+    bottom: -100%;
+    z-index: 2000;
+    display: none;
+    transition: .5s all ease-in-out;
+}
+button.large-yellow-btn {
+    cursor: pointer;
+}
+.modal-active {
+    display: flex !important;
+}
+.bottom-zero {
+    bottom: 0 !important;
+}
+.show-before::before {
+    display: block;
 }
 
 
@@ -655,6 +771,10 @@ a {
 #add-order:hover, #subtract-order:hover {
     opacity: .5;
 }
+#cart-info .cart-items .cart-food-item > img {
+    max-width: 100px;
+    width: 100%;
+}
 
 
 
@@ -726,7 +846,17 @@ a {
 .edit-link {
     flex-basis: 40px;
 }
-
+.min-height {
+    height: calc(100vh - 136.7px);
+}
+#confirm-modal h3 {
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+}
+#confirm-modal h3 span {
+    font-family: Poppins-Bold;
+}
   
 
 
@@ -766,19 +896,20 @@ a {
     content: '';
     display: block;
 }
-
+.cart-items.flex-col .cart-food-item > img {
+    max-width: 100px;
+    width: 100%;
+}
 
 
 /* ///// FAVORITE ORDERS ///// */
 
 .image-heart {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.image-heart img:first-child {
-    margin-bottom: 45px;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-basis: 100%;
 }
 .image-heart img:last-child {
     width: 30px;
@@ -790,13 +921,6 @@ a {
 .favorite-order {
     position: relative;
     margin-top: 20px;
-}
-.favorite-order::before {
-    content: '10/25/21';
-    position: absolute;
-    top: -26px;
-    left: 0;
-    font-family: Poppins-Regular;
 }
 .favorite-order::after {
     bottom: 0;
@@ -810,6 +934,85 @@ a {
 }
 .favorite-order {
     padding-bottom: 30px;
+}
+.image-heart {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-basis: 100%;
+}
+.image-heart img:first-child {
+    margin-bottom: 0;
+}
+.image-heart + .cart-food-item-info.flex-col {
+    display: flex;
+    flex-direction: revert;
+}
+.image-heart img {
+    flex-basis: 30%;
+}
+.recent-favorite {
+    flex-basis: 70%;
+    padding-left: 25px;
+}
+.image-heart + .cart-food-item-info.flex-col .large-yellow-btn {
+    flex-basis: 70%;
+}
+.image-heart + .cart-food-item-info {
+    flex-basis: 100%;
+}
+.image-heart + .cart-food-item-info img {
+    flex-basis: 20px;
+}
+.image-heart + .cart-food-item-info.flex-col {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.fb-30 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 30%;
+}
+.image-heart + .cart-food-item-info {
+    padding: 0;
+}
+.recent-favorite-image img {
+    max-width: 100px !important;
+    width: 100% !important;
+}
+.recent-favorite-image {
+    position: relative;
+}
+.recent-favorite-image::before {
+    content: '10/25/21';
+    position: absolute;
+    top: -26px;
+    left: 0;
+    font-family: Poppins-Regular;
+}
+.image-heart + .cart-food-item-info .fb-30 {
+    max-width: 100px !important;
+    width: 100%;
+}
+.image-heart + .cart-food-item-info {
+    justify-content: center;
+}
+.recent-favorite-a-space {
+    flex-basis: 70%;
+    padding-left: 25px;
+}
+.image-heart + .cart-food-item-info.flex-col .large-yellow-btn {
+    display: block;
+}
+.recent .image-heart .recent-favorite-image::before {
+    display: none;
+}
+.recent-favorite-a-space a {
+    max-width: 390px;
+}
+.recent-favorite p {
+    max-width: 390px;
 }
 
 
@@ -906,6 +1109,11 @@ a {
 #tracking-height {
     height: calc(100vh - 357.3px);
 }
+#tracking-times .col-30 {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
 
 
 
@@ -923,16 +1131,37 @@ a {
     padding-bottom: 50px;
     font-size: 26px;
 }
+
+button.active {
+    box-shadow: none !important;
+    background: #f0d028 !important;
+    border-color: #D4B616 !important;
+}
   
   
 
-
+@media only screen and (max-width: 520px) {
+#confirm-modal a, #confirm-modal button {
+    font-size: 22px;
+    line-height: normal;
+}
+}
 @media only screen and (max-width: 500px) {
 h1 {
     font-size: 36px !important;
 }
+#confirm-modal a, #confirm-modal button {
+    font-size: 20px;
 }
-
+}
+@media only screen and (max-width: 460px) {
+#confirm-modal a, #confirm-modal button {
+    font-size: 18px;
+}
+#confirm-modal h3 {
+    font-size: 20px;
+}
+}
 @media only screen and (max-width: 420px) {
 
 .header {
@@ -1000,6 +1229,9 @@ h1 {
 }
 #nothing-bird h3 {
     font-size: 24px;
+}
+#confirm-modal {
+    padding: 30px;
 }
 }
 
@@ -1153,6 +1385,7 @@ h4 {
 #home-info {
     margin: 30px auto 50px auto;
     max-width: 600px;
+    display: none;
 }
 h1 {
     font-size: 45px !important;
@@ -1172,4 +1405,14 @@ h1 {
 .food-hero {
     height: 300px;
 }
+.col-1-1.single-button a {
+    display: block;
+}
+#home-menu {
+    display: flex;
+}
 } 
+
+
+
+  

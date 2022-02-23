@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="../css/styles.css">
         <link rel="stylesheet" href="../css/normalize.css">
     </head>
-    <body>
+    <body class="relative-modal" id="modal-before">
         <nav id="mobile-nav">
             <header class="header home-header">
                 <div id="x" class="x-menu">
@@ -53,6 +53,7 @@
                 </a>
             </div>
         </header>
+        <div class="min-height">
         <section id="order-info">
             <div class="menu-header flex-row">
                 <div class="col-1-3">
@@ -68,7 +69,7 @@
             </div>
             <div class="cart-items flex-col">
                 <div class="cart-food-item flex-row-wrap">
-                    <img src="../media/images/small-breakfast-sandwich.png" alt="Small breakfast Sandwich">
+                    <img src="../media/images/happy-sunshine-breakfast-sandwich.png" alt="Small breakfast Sandwich">
                     <div class="cart-food-item-info flex-col">
                         <h5>Breakfast Sandwich</h5>
                         <p>Bagel, Bacon, Egg, Cheese, Ketchup, Salt, Pepper</p>
@@ -97,9 +98,27 @@
                 <h5>Pick-up location:</h5>
                 <a href="#">33rd Street and Arch Street Phildelphia, PA 19104</a>
                 <p>Total: $5.00 <span>Cash Only</span></p>
-                <a href="receipt.php" class="large-yellow-btn">Confirm Order</a>
+                <button id="modal-button" class="large-yellow-btn">Add to Cart</button>
+                <!-- <a href="receipt.php" class="large-yellow-btn">Confirm Order</a> -->
             </div>
         </section>
+        </div>
+        <div id="confirm-modal">
+                <div class="col-1-1">
+                    <h3>Confirm your <span>cash only</span> order of pick up?</h3>
+                </div>
+                <div class="col-1-1">
+                    <div class="col-1-2">
+                        <button id="cancel-button" class="large-yellow-btn">Cancel</button>
+                        <!-- <a href="menu.php" class="large-yellow-btn">Back to Menu</a> -->
+                    </div>
+                    <div class="col-1-2">
+                        <a href="receipt.php" class="large-yellow-btn">Confirm</a>
+                    </div>
+                </div>
+            </div>
+        <!-- <script src="../scripts/confirmModal.js" async defer></script> -->
+        <script src="../scripts/closeModal.js" async defer></script>
         <script src="../scripts/script.js" async defer></script>
     </body>
 </html>
