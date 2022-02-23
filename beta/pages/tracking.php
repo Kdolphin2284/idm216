@@ -45,6 +45,7 @@
                 <img src="../media/images/happy-sunshine-cart.svg">
             </div>
         </header>
+        <div id="tracking-height">
         <div class="menu-header flex-row">
             <div class="col-1-3">
                 <a href="menu.php" class="flex-row">
@@ -105,6 +106,7 @@
                 </div>
             </div>
         </section>
+        </div>
         <section id="order-ready">
             <div id="tracking-black-bar">
                 <div class="black-bar"></div>

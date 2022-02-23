@@ -1,3 +1,4 @@
 *.DS_Store
 
-alpha/includes/db.php
+databaseInfoTest/includes/db.php
+beta/includes/db.php

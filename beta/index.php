@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 
+<?php
+
+    // Header + Database Connection
+    // include 'includes/db.php';
+
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -68,6 +75,11 @@
                     <img src="media/images/hero-arrow.svg" alt="Arrow">
                 </div>
                 <p>Our classic breakfast staple with your choice of protein + extras</p>
+                <div class="hero-circle-btns">
+                        <div class="hero-circle"></div>
+                        <div class="hero-circle"></div>
+                        <div class="hero-circle"></div>
+                    </div>
             </div>
         </section>
         <section id="home-info">
@@ -111,6 +123,26 @@
                 </div>
             </div>
         </section>
+        <section id="home-bird">
+            <img src="../media/images/Tracking-Egg-3.svg" alt="Tracking Animation">
+        </section>
+        <footer id="orange-footer">
+            <div id="footer-container">
+            <div class="flex-row">
+                <div class="col-1-4">
+                    <img src="media/images/happy-sunshine-footer.svg">
+                </div>
+                <div class="col-3-4">
+                    <p>Find us at:</p>
+                    <div class="flex-row">
+                        <a href="#">33rd and Arch Street, Philadelphia, PA 19104</a>
+                        <img src="media/images/happy-sunshine-link.svg">
+                    </div>
+                    <p>6:am to 2:30pm</p>
+                </div>
+            </div>
+            </div>
+        </footer>
         <script src="scripts/script.js" async defer></script>
     </body>
 </html>

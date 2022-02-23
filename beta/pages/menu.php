@@ -11,6 +11,16 @@
         <link rel="stylesheet" href="../css/styles.css">
         <link rel="stylesheet" href="../css/normalize.css">
     </head>
+    <?php
+
+    // Db Connection
+    include '../includes/db.php';
+
+    // Select Information from MySQL
+    $sql = "SELECT * FROM happy_sunshine_food";
+    $result = mysqli_query($conn, $sql);
+
+    ?>
     <body>
         <nav id="mobile-nav">
             <header class="header home-header">
@@ -66,7 +76,26 @@
                 </div>
                 <div class="col-1-3"></div>
             </div>
-            <div id="general-menu-selection">
+            <?php
+                        while($row = mysqli_fetch_array($result)){
+                            $category = htmlspecialchars_decode($row['category'], ENT_QUOTES);
+                            $id = $row['id'];
+
+                            // Slugifying each category
+                            // $lower_category = strtolower($category);
+                            $min_category = str_replace(' ', '-', $category);
+
+                            $icon_origin = strtok($category, " ");
+                            $icon_key = strtolower($icon_origin);
+
+                            // Echo out a link for every single category page
+                            echo "<a class='menu-item col-1-1 flex-row' href='individual.php?id=" . $id ."'>
+                            <img src='../media/images/" . $icon_key . "-logo.svg'>
+                            <h3>$category</h3>
+                            </a>";
+                        }
+                    ?> 
+            <!-- <div id="general-menu-selection">
                 <a href="orderCustomization.php" class="menu-item col-1-1 flex-row">
                     <img src="../media/images/breakfast-sandwich-logo.svg">
                     <h3>Breakfast Sandwiches</h3>
@@ -111,7 +140,7 @@
                     <img src="../media/images/drinks-logo.svg">
                     <h3>Drinks</h3>
                 </div>
-            </div>
+            </div> -->
         </section>
         <script src="../scripts/script.js" async defer></script>
     </body>
