@@ -29,7 +29,6 @@
                 <a href="menu.php">Menu</a>
                 <a href="favoriteOrders.php">Favorites</a>
                 <a href="recentOrders.php">Recents</a>
-                <a href="#">Profile</a>
             </div>
         </nav>
         <header class="header">

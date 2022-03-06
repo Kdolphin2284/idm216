@@ -44,7 +44,6 @@
                 <a href="pages/menu.php">Menu</a>
                 <a href="pages/favoriteOrders.php">Favorites</a>
                 <a href="pages/recentOrders.php">Recents</a>
-                <a href="#">Profile</a>
             </div>
         </nav>
         <section id="home-hero">
@@ -154,7 +153,7 @@
             </div>
         </section>
         <section id="home-bird">
-            <img src="../media/images/Tracking-Egg-3.svg" alt="Tracking Animation">
+            <img src="media/images/Tracking-Egg-3.svg" alt="Tracking Animation">
         </section>
         <footer id="orange-footer">
             <div id="footer-container">

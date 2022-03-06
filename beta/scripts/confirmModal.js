@@ -10,6 +10,10 @@ modalButton.addEventListener("click", function(){
   if (confirmModal.classList.contains('modal-active')) {
     bodyBefore.classList.add('show-before');
     confirmModal.classList.add('bottom-zero');
+    if(bodyBefore.classList.contains('show-before')){
+      document.documentElement.style.setProperty('--opacity', "1");
+      console.log('opacity changed to 1');
+    }
     disableScroll();
     console.log('Showing Modal');
   }

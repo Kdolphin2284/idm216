@@ -18,6 +18,9 @@
     src: url(../fonts/Poppins-Bold.woff);
     src: url(../fonts/Poppins-Bold.woff2);
 }
+::root {
+    --opacity: 0;
+}
 input {
     font-family: Poppins-Regular !important;
 }
@@ -647,14 +650,16 @@ a {
     left: 0;
     background: rgba(0,0,0,.5);
     z-index: 1000;
-    transition: all .5s ease-in-out;
+    transition: var(--opacity) .5s ease-in-out;
+    opacity: var(--opacity);
 }
 #confirm-modal {
     position: absolute;
     bottom: -100%;
     z-index: 2000;
     display: none;
-    transition: .5s all ease-in-out;
+    transition: var(--opacity) .5s ease-in-out;
+    opacity: var(--opacity);
 }
 button.large-yellow-btn {
     cursor: pointer;
@@ -1334,6 +1339,12 @@ h1 {
 .food-hero::before {
     display: none;
 }
+#customization-hero .food-hero::before {
+    display: block !important;
+}
+#customization-hero .food-hero {
+    height: 400px !important;
+}
 .hero-text {
     padding: 50px 0 10px 0;
     background: linear-gradient(0deg, #faf6f2 40px, transparent);
@@ -1410,6 +1421,9 @@ h1 {
 }
 #home-menu {
     display: flex;
+}
+#customization-hero .food-hero {
+    background-position: center !important;
 }
 } 
 
