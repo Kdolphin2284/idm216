@@ -1,5 +1,7 @@
 <?php
 
+ob_start();
+
 // include db connection
 include 'db.php';
 
@@ -78,19 +80,15 @@ if(isset($_POST['submit'])) {
     //         VALUES ('$hs_category', '$hs_base', '$hs_protein', '$hs_more', '$hs_toppings', '$hs_drinks', '$hs_sides', '$hs_price', '$hs_blurb', '$hs_hero', '$id')";
 
     $query_run = mysqli_query($conn, $query);
-
+    
+    if ($query_run) {
+        header("Location: ../pages/cart.php?edit=successful");
+    } else {
+        header("Location: ../pages/cart.php?edit=failure");
+    }
 
 } else {
     echo 'Not Working';
-}
-
-
-
-
-if ($query_run) {
-    header("Location: ../pages/cart.php?edit=successful");
-} else {
-    header("Location: ../pages/cart.php?edit=failure");
 }
 
 

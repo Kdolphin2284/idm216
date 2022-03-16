@@ -1,5 +1,7 @@
 <?php
 
+ob_start();
+
 // include db connection
 include 'db.php';
 
@@ -68,27 +70,29 @@ if(isset($_POST['submit'])) {
 
     $uniqueId = rand(100, 2000);
 
-
-    echo 'Working';
-
     $query = "INSERT INTO order_information (category, base, protein, more, toppings, drinks, sides, price, blurb, heroImage, originalId, uniqueId) 
             VALUES ('$hs_category', '$hs_base', '$hs_protein', '$hs_more', '$hs_toppings', '$hs_drinks', '$hs_sides', '$totalFoodPrice', '$hs_blurb', '$hs_hero', '$id', '$uniqueId')";
 
     $query_run = mysqli_query($conn, $query);
 
 
+    // header("Location: ../pages/individual.php?id=$id&update=success");
+
+
+    // echo 'Working';
+
+    // ob_start();
+    if ($query_run) {
+        header("Location: ../pages/individual.php?id=$id&update=success");
+    } else {
+        header("Location: ../pages/individual.php?id=$id&update=failure");
+    }
+    echo 'Working';
+
 } else {
     echo 'Not Working';
 }
 
-
-
-
-if ($query_run) {
-    header("Location: ../pages/individual.php?id=$id&update=success");
-} else {
-    header("Location: ../pages/individual.php?id=$id&update=failure");
-}
 
 
 

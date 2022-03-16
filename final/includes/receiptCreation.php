@@ -1,5 +1,7 @@
 <?php
 
+ob_start();
+
 // include db connection
 include 'db.php';
 

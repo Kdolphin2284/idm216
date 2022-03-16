@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 echo 'hi';
 // include db connection
