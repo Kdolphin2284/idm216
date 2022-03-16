@@ -50,18 +50,16 @@ if ($result-> num_rows > 0) {
                     <img src="../media/images/x.svg">
                 </div>
                 <div class="hs-logo">
-                    <a href="../index.php">
+                    <a href="../home.php">
                         <img src="../media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
                     </a>
                 </div>
                 <div class="cart">
-                    <a href="cartWithNothing.php">
-                        <img src="../media/images/happy-sunshine-cart.svg" alt="Happy Sunshine Logo">
-                    </a>
+                    <?php include '../includes/cartIcon.php'; ?>
                 </div>
             </header>
             <div id="nav-links">
-                <a href="../index.php">Home</a>
+                <a href="../home.php">Home</a>
                 <a href="menu.php">Menu</a>
                 <a href="favoriteOrders.php">Favorites</a>
                 <a href="recentOrders.php">Recents</a>
@@ -74,14 +72,17 @@ if ($result-> num_rows > 0) {
                     <div class="hamburger-rectangle"></div>
                 </div>
                 <div class="hs-logo">
-                    <a href="../index.php">
+                    <a href="../home.php">
                         <img src="../media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
                     </a>
                 </div>
                 <div class="cart">
-                    <a href="cartWithNothing.php">
-                        <img src="../media/images/happy-sunshine-cart.svg">
-                    </a>
+                    <div class="rest-nav">
+                        <a href="menu.php">Menu</a>
+                        <a href="favoriteOrders.php">Favorites</a>
+                        <a href="recentOrders.php">Recents</a>
+                    </div>
+                    <?php include '../includes/cartIcon.php'; ?>
                 </div>
             </header>
             <div class="menu-header flex-row">
@@ -94,19 +95,17 @@ if ($result-> num_rows > 0) {
                 <div class="col-1-3"></div>
                 <div class="col-1-3"></div>
             </div>
+            <div id="desktop-optimization">
             <section id="customization-hero">
-                <div class="food-hero" style="background: url('<?php echo $hs_hero ;?>'); background-size: cover;"></div>
+                <div class="food-hero" style="background: url('<?php echo $hs_hero ;?>'); background-size: cover; background-position: top;"></div>
                 <div class="hero-text">
-                <?php
-                    // Category
-                    echo "<h4>$hs_category</h4>";
-                    ?>
+                    <h4><?php echo $hs_category; ?><span class="price-desktop"><?php echo $hs_price; ?></span></h4>
                     <p><?php echo $hs_price; ?></p>
                     <p><?php echo $hs_blurb; ?></p>
                 </div>
             </section>
             <div id="individual_options">
-                <form method="POST" action="../includes/updateCart.php">
+                <form method="POST" action="../includes/addCart.php">
                     <section id="order-customization-section">
                         
                         <field hidden>
@@ -124,6 +123,8 @@ if ($result-> num_rows > 0) {
                         <field hidden>
                             <input name="id" id="id" value="<?php echo $id ?>">
                         </field>
+
+                        <h2 class="desktop-customize-title">Customize Order</h2>
 
                         <!-- Base Start -->
                         <?php if (sizeof($hs_base) > 1) { ?>
@@ -199,8 +200,8 @@ if ($result-> num_rows > 0) {
                                                     echo 
                                                     "
                                                     <div class='food_input'>
-                                                        <input name='protein' id='$proteinNoSpace' type='checkbox' value='$protein' hidden>
-                                                        <label class='food_choice protein' onclick='btnToggle2(event)' for='$proteinNoSpace'><p>$proteinWithPrice[0]</p><p>$proteinWithPrice[1]</p></label>
+                                                        <input name='protein' id='$proteinNoSpace' type='radio' value='$protein' hidden>
+                                                        <label class='food_choice protein' for='$proteinNoSpace'><p>$proteinWithPrice[0]</p><p>$proteinWithPrice[1]</p></label>
                                                     </div>
                                                     ";
                                                     continue;
@@ -209,8 +210,8 @@ if ($result-> num_rows > 0) {
                                                 echo 
                                                 "
                                                     <div class='food_input'>
-                                                        <input name='protein' id='$proteinNoSpace' type='checkbox' value='$protein' hidden>
-                                                        <label class='food_choice protein' onclick='btnToggle2(event)' for='$proteinNoSpace'><p>$protein</p></label>
+                                                        <input name='protein' id='$proteinNoSpace' type='radio' value='$protein' hidden>
+                                                        <label class='food_choice protein' for='$proteinNoSpace'><p>$protein</p></label>
                                                     </div>
                                                 ";
 
@@ -256,7 +257,7 @@ if ($result-> num_rows > 0) {
                                                 "
                                                     <div class='food_input'>
                                                         <input name='more[]' id='$moreNoSpace' type='checkbox' value='$more' hidden>
-                                                        <label class='food_choice more' onclick='btnMulti2(event)' for='$moreNoSpace'><p>$more</p></label>
+                                                        <label class='food_choice more' for='$moreNoSpace'><p>$more</p></label>
                                                     </div>
                                                 ";
 
@@ -304,7 +305,7 @@ if ($result-> num_rows > 0) {
                                                 "
                                                     <div class='food_input'>
                                                         <input name='toppings[]' id='$toppingsNoSpace' type='checkbox' value='$toppings' checked hidden>
-                                                        <label class='food_choice toppings check-btn' onclick='btnMulti(event)' for='$toppingsNoSpace'><img src='../media/images/happy-sunshine-check.svg' alt='Checkmark'><p>$toppings</p></label>
+                                                        <label class='food_choice toppings check-btn' for='$toppingsNoSpace'><img src='../media/images/happy-sunshine-check.svg' alt='Checkmark'><p>$toppings</p></label>
                                                     </div>
                                                 ";
 
@@ -349,7 +350,7 @@ if ($result-> num_rows > 0) {
                                                 "
                                                     <div class='food_input'>
                                                         <input name='drinks[]' id='$drinksNoSpace' type='checkbox' value='$drinks' hidden>
-                                                        <label class='food_choice drinks' onclick='btnMulti2(event)' for='$drinksNoSpace'><p>$drinks</p></label>
+                                                        <label class='food_choice drinks' for='$drinksNoSpace'><p>$drinks</p></label>
                                                     </div>
                                                 ";
 
@@ -394,7 +395,7 @@ if ($result-> num_rows > 0) {
                                                 "
                                                     <div class='food_input'>
                                                         <input name='sides[]' id='$sidesNoSpace' type='checkbox' value='$sides' hidden>
-                                                        <label class='food_choice sides' onclick='btnMulti2(event)' for='$sidesNoSpace'><p>$sides</p></label>
+                                                        <label class='food_choice sides' for='$sidesNoSpace'><p>$sides</p></label>
                                                     </div>
                                                 ";
 
@@ -413,7 +414,7 @@ if ($result-> num_rows > 0) {
 
                             } ?>
                         <!-- Sides End -->
-
+                            
                         
 
                     </section>
@@ -430,6 +431,8 @@ if ($result-> num_rows > 0) {
                         </div>
                     </section>
                 </form>
+            </div>
+            </div>
             </div>
             <div id="confirm-modal">
                 <div class="col-1-1">

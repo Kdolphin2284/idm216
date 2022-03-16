@@ -89,9 +89,11 @@ function btnMulti(evt) {
   if(!evt.currentTarget.classList.contains('check-btn')) {
     evt.currentTarget.getElementsByTagName("img")[0].style.display = "none";
     evt.currentTarget.classList.add('font-18');
+    evt.currentTarget.classList.add('desktop-toppings');
   } else {
     evt.currentTarget.getElementsByTagName("img")[0].style.display = "block";
     evt.currentTarget.classList.remove('font-18');
+    evt.currentTarget.classList.remove('desktop-toppings');
   }
 }
 
@@ -105,4 +107,23 @@ function btnMulti2(evt) {
   }
 }
 
+// Multi Mutton Select - Sides
+
+function btnMulti3(evt) {
+  if(!evt.currentTarget.classList.contains('active')) {
+    evt.currentTarget.classList.add('active');
+  } else {
+    evt.currentTarget.classList.remove('active');
+  }
+}
+
+// Multi Mutton Select - Drinks
+
+function btnMulti4(evt) {
+  if(!evt.currentTarget.classList.contains('active')) {
+    evt.currentTarget.classList.add('active');
+  } else {
+    evt.currentTarget.classList.remove('active');
+  }
+}
 

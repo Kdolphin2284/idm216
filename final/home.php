@@ -29,14 +29,12 @@
                     <img src="media/images/x.svg">
                 </div>
                 <div class="hs-logo">
-                    <a href="index.php">
+                    <a href="home.php">
                         <img src="media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
                     </a>
                 </div>
                 <div class="cart">
-                    <a href="pages/cartWithNothing.php">
-                        <img src="media/images/happy-sunshine-cart.svg" alt="Happy Sunshine Cart">
-                    </a>
+                        <?php include 'includes/cartIcon.php'; ?>
                 </div>
             </header>
             <div id="nav-links">
@@ -54,23 +52,26 @@
                     <div class="hamburger-rectangle"></div>
                 </div>
                 <div class="hs-logo">
-                    <a href="index.php">
+                    <a href="home.php">
                         <img src="media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
                     </a>
                 </div>
                 <div class="cart">
-                    <a href="pages/cartWithNothing.php">
-                        <img src="media/images/happy-sunshine-cart.svg" alt="Happy Sunshine Cart">
-                    </a>
+                    <div class="rest-nav">
+                        <a href="pages/menu.php">Menu</a>
+                        <a href="pages/favoriteOrders.php">Favorites</a>
+                        <a href="pages/recentOrders.php">Recents</a>
+                    </div>
+                    <?php include 'includes/cartIcon.php'; ?>
                 </div>
             </header>
             <div class="food-hero">
-                <img src="media/images/hero-arrow.svg" alt="Arrow">
-                <div class="hero-circle-btns">
+                <!-- <img src="media/images/hero-arrow.svg" alt="Arrow"> -->
+                <!-- <div class="hero-circle-btns">
                     <div class="hero-circle"></div>
                     <div class="hero-circle"></div>
                     <div class="hero-circle"></div>
-                </div>
+                </div> -->
             </div>
             <div class="hero-text">
                 <div class="flex-row">
@@ -78,15 +79,16 @@
                     <img src="media/images/hero-arrow.svg" alt="Arrow">
                 </div>
                 <p>Our classic breakfast staple with your choice of protein + extras</p>
-                <div class="hero-circle-btns">
+                <!-- <h3 class="spotlight">Spotlight</h3> -->
+                <!-- <div class="hero-circle-btns">
                         <div class="hero-circle"></div>
                         <div class="hero-circle"></div>
                         <div class="hero-circle"></div>
-                    </div>
+                    </div> -->
             </div>
         </section>
         <section id="home-info">
-            <h1>Good Morning, John!</h1>
+            <h1>Good Morning!</h1>
             <div class="flex-row-wrap">
                 <div class="col-1-1">
                     <div class="col-1-2">
@@ -113,6 +115,7 @@
         <div class="col-1-1 single-button">
                 <a href="pages/menu.php" class="large-yellow-btn">Start Order</a>
         </div>
+        <h2 id="home-welcome">Welcome to Happy Sunshine!</h2>
         <section id="home-menu">
         
         <?php
@@ -144,7 +147,7 @@
                 <div class="col-3-4">
                     <p>Find us at:</p>
                     <div class="flex-row">
-                        <a href="#">33rd and Arch Street, Philadelphia, PA 19104</a>
+                        <a href="https://goo.gl/maps/831imkCAV1D99KYcA" target="_blank">33rd and Arch Street, Philadelphia, PA 19104</a>
                         <img src="media/images/happy-sunshine-link.svg">
                     </div>
                     <p>6:am to 2:30pm</p>
@@ -164,7 +167,7 @@
                 <div class="col-3-4">
                     <p>Find us at:</p>
                     <div class="flex-row">
-                        <a href="#">33rd and Arch Street, Philadelphia, PA 19104</a>
+                        <a href="https://goo.gl/maps/831imkCAV1D99KYcA" target="_blank">33rd and Arch Street, Philadelphia, PA 19104</a>
                         <img src="media/images/happy-sunshine-link.svg">
                     </div>
                     <p>6:am to 2:30pm</p>

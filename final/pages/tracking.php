@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 
+<?php
+
+$price = $_GET['price'];
+$name = $_GET['name'];
+$time = $_GET['time'];
+
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -18,14 +26,16 @@
                     <img src="../media/images/x.svg">
                 </div>
                 <div class="hs-logo">
-                    <img src="../media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
+                    <a href="../home.php">
+                        <img src="../media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
+                    </a>
                 </div>
                 <div class="cart">
-                    <img src="../media/images/happy-sunshine-cart.svg" alt="Happy Sunshine Cart">
+                    <?php include '../includes/cartIcon.php'; ?>
                 </div>
             </header>
             <div id="nav-links">
-                <a href="../index.php">Home</a>
+                <a href="../home.php">Home</a>
                 <a href="menu.php">Menu</a>
                 <a href="favoriteOrders.php">Favorites</a>
                 <a href="recentOrders.php">Recents</a>
@@ -38,10 +48,17 @@
                 <div class="hamburger-rectangle"></div>
             </div>
             <div class="hs-logo">
-                <img src="../media/images/happy-sunshine-logo.svg">
+                <a href="../home.php">
+                    <img src="../media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
+                </a>
             </div>
             <div class="cart">
-                <img src="../media/images/happy-sunshine-cart.svg">
+                <div class="rest-nav">
+                    <a href="menu.php">Menu</a>
+                    <a href="favoriteOrders.php">Favorites</a>
+                    <a href="recentOrders.php">Recents</a>
+                </div>
+                <?php include '../includes/cartIcon.php'; ?>
             </div>
         </header>
         <div id="tracking-height">
@@ -58,7 +75,7 @@
             <div class="col-1-3"></div>
         </div>
         <section id="tracking-animation">
-            <img src="../media/images/Tracking-Egg-3.svg" alt="Tracking Animation">
+            <img id="tracking-image" src="../media/images/Tracking-Egg-1.svg" alt="Tracking Animation">
         </section>
         <section id="tracking-info">
             <div id="tracking-titles">
@@ -67,11 +84,11 @@
                 </div>
                 <div class="col-1-5"></div>
                 <div class="col-30">
-                    <p>Preparing Order</p>
+                    <p id="order-step-2">Preparing Order</p>
                 </div>
                 <div class="col-1-5"></div>
                 <div class="col-30">
-                    <p>Order Ready</p>
+                    <p id="order-step-3">Order Ready</p>
                 </div>
             </div>
             <div id="tracking-images">
@@ -82,13 +99,13 @@
                     <img src="../media/images/tracking-yellow-line.svg" alt="Tracking Yellow Line Image">
                 </div>
                 <div class="col-30">
-                    <img src="../media/images/tracking-sun.svg" alt="Tracking Sun Image">
+                    <img id="tracking-sun-2" src="../media/images/tracking-circle.svg" alt="Tracking Sun Image">
                 </div>
                 <div class="col-1-5">
                     <img src="../media/images/tracking-yellow-line.svg" alt="Tracking Yellow Line Image">
                 </div>
                 <div class="col-30">
-                    <img src="../media/images/tracking-sun.svg" alt="Tracking Sun Image">
+                    <img id="tracking-sun-3" src="../media/images/tracking-circle.svg" alt="Tracking Sun Image">
                 </div>
             </div>
             <div id="tracking-times">
@@ -97,11 +114,11 @@
                 </div>
                 <div class="col-1-5"></div>
                 <div class="col-30">
-                    <p>1:11pm</p>
+                    <p id="order-time-2">1:11pm</p>
                 </div>
                 <div class="col-1-5"></div>
                 <div class="col-30">
-                    <p>1:15pm</p>
+                    <p id="order-time-3">1:15pm</p>
                 </div>
             </div>
         </section>
@@ -113,8 +130,9 @@
             <p>Your order is ready!
                 Please show the receipt
                 when picking up order.</p>
-                <a class="large-yellow-btn" href="receiptAfterTracking.php">View Receipt</a>
+                <a class="large-yellow-btn" href="receiptAfterTracking.php?price=<?php echo $price; ?>&name=<?php echo $name; ?>&time=<?php echo $time; ?>">View Receipt</a>
         </section>
         <script src="../scripts/script.js" async defer></script>
+        <script src="../scripts/orderTracking.js" async defer></script>
     </body>
 </html>

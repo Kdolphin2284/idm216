@@ -9,6 +9,19 @@ include '../includes/db.php';
 $sql = "SELECT * FROM order_information";
 $result = mysqli_query($conn, $sql);
 
+// For Total Price
+$sqlPrice = "SELECT * FROM order_information";
+$resultPrice = mysqli_query($conn, $sql);
+
+while($row = mysqli_fetch_array($resultPrice)){
+    $price = htmlspecialchars_decode($row['price'], ENT_QUOTES);
+    $priceNoDollar = str_replace("$", "", $price);
+    $priceFloat = floatval($priceNoDollar);
+    $totalPrice += $priceFloat;
+}
+
+$totalPriceDecimal = number_format($totalPrice,2,'.','');
+$finalPrice = "$" . $totalPriceDecimal;
 ?>
 
 <html>
@@ -22,23 +35,64 @@ $result = mysqli_query($conn, $sql);
         <link rel="stylesheet" href="../css/styles.css">
         <link rel="stylesheet" href="../css/normalize.css">
     </head>
+
+    <?php
+    
+    // Requesting Information from Selected Category
+    $sql = "SELECT COUNT(*) FROM order_information";
+    $resultCartPage = mysqli_query($conn, $sql);
+
+    $numCartItems2 = $resultCartPage->fetch_assoc();
+    $totalCartItems2 = $numCartItems2['COUNT(*)'];
+
+    // echo $totalCartItems2;
+
+    if($totalCartItems2 > 0) {
+        echo "
+        <style>
+        #cart-has-stuff {
+            display: block;
+        }
+        #cart-has-nothing {
+            display: none;
+        }
+
+        
+        </style>
+        ";
+    } else {
+        echo 
+        "
+        <style>
+        #cart-has-stuff {
+            display: none;
+        }
+        #cart-has-nothing {
+            display: block;
+        }
+        
+        </style>
+        ";
+    }
+    
+    ?>
     <body>
-        <nav id="mobile-nav">
+    <nav id="mobile-nav">
             <header class="header home-header">
                 <div id="x" class="x-menu">
                     <img src="../media/images/x.svg">
                 </div>
                 <div class="hs-logo">
-                    <a href="../index.php">
+                    <a href="../home.php">
                         <img src="../media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
                     </a>
                 </div>
                 <div class="cart">
-                    <img src="../media/images/happy-sunshine-cart-filled.svg" alt="Happy Sunshine Cart">
+                    <?php include '../includes/cartIcon.php'; ?>
                 </div>
             </header>
             <div id="nav-links">
-                <a href="../index.php">Home</a>
+                <a href="../home.php">Home</a>
                 <a href="menu.php">Menu</a>
                 <a href="favoriteOrders.php">Favorites</a>
                 <a href="recentOrders.php">Recents</a>
@@ -51,14 +105,20 @@ $result = mysqli_query($conn, $sql);
                 <div class="hamburger-rectangle"></div>
             </div>
             <div class="hs-logo">
-                <a href="../index.php">
+                <a href="../home.php">
                     <img src="../media/images/happy-sunshine-logo.svg" alt="Happy Sunshine Logo">
                 </a>
             </div>
             <div class="cart">
-                <img src="../media/images/happy-sunshine-cart-filled.svg" alt="Happy Sunshine Cart">
+                <div class="rest-nav">
+                    <a href="menu.php">Menu</a>
+                    <a href="favoriteOrders.php">Favorites</a>
+                    <a href="recentOrders.php">Recents</a>
+                </div>
+                <?php include '../includes/cartIcon.php'; ?>
             </div>
         </header>
+        <div id="cart-has-stuff">
         <section id="cart-info">
             <div class="menu-header flex-row">
                 <div class="col-1-3">
@@ -78,6 +138,7 @@ $result = mysqli_query($conn, $sql);
             while($row = mysqli_fetch_array($result)){
                 // Initialize Variables
                     $id = $row['id'];
+                    $originalId = $row['originalId'];
                     $hs_base = explode(", ", htmlspecialchars_decode($row['base'], ENT_QUOTES));
                     $hs_protein = explode(", ", htmlspecialchars_decode($row['protein'], ENT_QUOTES));
                     $hs_more = explode(", ", htmlspecialchars_decode($row['more'], ENT_QUOTES));
@@ -87,48 +148,58 @@ $result = mysqli_query($conn, $sql);
                     $hs_price = htmlspecialchars_decode($row['price'], ENT_QUOTES);
                     $hs_hero = $row['heroImage'];
                     $hs_category = htmlspecialchars_decode($row['category'], ENT_QUOTES);
+                    $hs_blurb = htmlspecialchars_decode($row['blurb'], ENT_QUOTES);
+                    $blurbNoSpace = str_replace(" ", "-", $hs_blurb);
+                    $uniqueId = $row['uniqueId'];
 
-                    var_dump($hs_more);
+
+
                         // Singular or plural category names for food items
                         if ($hs_category == 'Breakfast Sandwiches') {
-                            $hs_category = 'Breakfast Sandwich';
+                            $category = 'Breakfast Sandwich';
                         } else if ($hs_category == 'French Toast') {
-                            $hs_category = 'French Toast';
+                            $category = 'French Toast';
                         } else if ($hs_category == 'Cheesesteaks') {
-                            $hs_category = 'Cheesesteak';
+                            $category = 'Cheesesteak';
                         } else if ($hs_category == 'Lunch Sandwiches') {
-                            $hs_category = 'Lunch Sandwich';
+                            $category = 'Lunch Sandwich';
                         } else if ($hs_category == 'Club Sandwiches') {
-                            $hs_category = 'Club Sandwich';
+                            $category = 'Club Sandwich';
                         } else if ($hs_category == 'Hot Dog & Sausage') {
-                            $hs_category = 'Hot Dog & Sausage';
+                            $category = 'Hot Dog & Sausage';
                         } else if ($hs_category == 'Hoagies') {
-                            $hs_category = 'Hoagie';
+                            $category = 'Hoagie';
                         } else if ($hs_category == 'Burgers') {
-                            $hs_category = 'Burger';
+                            $category = 'Burger';
                         } else if ($hs_category == 'Grilled Cheese') {
-                            $hs_category = 'Grilled Cheese';
+                            $category = 'Grilled Cheese';
                         } else if ($hs_category == 'Side Orders') {
-                            $hs_category = 'Side Order';
+                            $category = 'Side Order';
                         } else if ($hs_category == 'Drinks') {
-                            $hs_category = 'Drinks';
+                            $category = 'Drinks';
                         } 
 
                         // Array to strings
 
-                        // Base Variable Initialized
-                        for($i = 0; $i<count($hs_base); $i++)
-                        {
+                        // Sides Variable Initialized
+                        $sides = implode(", ", $hs_sides);
 
-                            $base = $hs_base[$i];
-                             if($base === '') {
-                                $base = '';
-                             } else {
-                                $base = $hs_base[$i] . ", ";
-                             }
+                        // Drinks Variable Initialized
+                        $drinks = implode(", ", $hs_drinks);
 
+                        // Toppings Variable Initialized
+                        $toppings = implode(", ", $hs_toppings);
+
+                        // More Variable Initialized
+                        $more = implode(", ", $hs_more);
+                        if($more === '') {
+                            $more = '';
+                        } else if ($toppings === ''){
+                            $more = implode(", ", $hs_more);
+                        } else {
+                            $more = implode(", ", $hs_more) . ", ";
                         }
-                    
+
                         // Protein Variable Initialized
                         for($i = 0; $i<count($hs_protein); $i++)
                         {
@@ -136,64 +207,32 @@ $result = mysqli_query($conn, $sql);
                             $totalProtein = $hs_protein[$i];
                             $proteinWithNoPrice = explode(":", htmlspecialchars_decode($totalProtein), ENT_QUOTES);
                             $realProtein = $proteinWithNoPrice[0];
-
+                            
                             if ($realProtein === '') {
                                 $protein = '';
+                            } else if ($more === '' && $toppings == ''){
+                                $protein = $realProtein;
                             } else {
                                 $protein = $realProtein . ", ";
                             }
-                            
-                        }
-
-                        // More Variable Initialized
-                        for($i = 0; $i<count($hs_more); $i++)
-                        {
-
-                            // $more = $hs_more[$i];
-                            $more = $hs_more[$i];
-                            // if($more === '') {
-                            //    $more = '';
-                            // } else {
-                            //    $more = $hs_more[$i];
-                            // }
-
-                           
-
-                            
-
-                        }
-
-                        var_dump(count($hs_more));
-                        for($i = 0; $i<count($hs_toppings); $i++)
-                        {
-
-                            $toppings = $hs_toppings[$i];
-                             if(!$toppings == NULL) {
-                                $toppings = $hs_toppings[$i] . ", ";
-                             }
 
                         }
                         
-                        for($i = 0; $i<count($hs_drinks); $i++)
+                        // Base Variable Initialized
+                        for($i = 0; $i<count($hs_base); $i++)
                         {
 
-                            $drinks = $hs_drinks[$i];
-                            //  if(!$drinks == NULL) {
-                            //     $drinks = $hs_drinks[$i] . ", ";
-                            //  }
+                            $base = $hs_base[$i];
 
+                            if($base === '') {
+                                $base = '';
+                            } else if ($protein === '' && $more === '' && $toppings === ''){
+                                $base = $hs_base[$i];
+                            } else {
+                                $base = $hs_base[$i] . ", ";
+                            } 
                         }
-
-                        for($i = 0; $i<count($hs_sides); $i++)
-                        {
-
-                            $sides = $hs_sides[$i];
-                             if(!$sides == NULL) {
-                                $sides = $hs_sides[$i] . ", ";
-                             }
-
-                        }
-
+                        
                 echo 
                 "
                 <div class='cart-indi-item'>
@@ -201,7 +240,7 @@ $result = mysqli_query($conn, $sql);
                         <div class='cart-food-item flex-row-wrap'>
                             <img src='' alt='Small Breakfast Sandwich' style='max-width: 100px; width: 100%; height: 80px; background-image: url($hs_hero); background-size: cover; background-position: top; background-repeat: no-repeat; color: transparent;'>
                             <div class='cart-food-item-info flex-col'>
-                                <h5>$hs_category $id This is an id</h5>
+                                <h5>$category</h5>
                                 <p>$base $protein $more $toppings $drinks $sides</p>
                                 <p>Price: <span>$hs_price</span></p>
                             </div>
@@ -209,32 +248,53 @@ $result = mysqli_query($conn, $sql);
                     </div>
                     <div class='cart-remove-edit-add flex-row col-1-1'>
                         <div class='col-1-2'>
-                            <a href='#'>Remove</a>
-                            <a href='#'>Edit</a>
+                            <a href='../includes/deleteFromCart.php?id=$id'>Remove</a>
+                            <a href='orderEdit.php?id=$id&originalId=$originalId&base=$base&protein=$protein&more=$more&toppings=$toppings&drinks=$drinks&sides=$sides&price=$hs_price&uniqueId=$uniqueId'>
+                                Edit
+                            </a>
                         </div>
                         <div class='col-1-2'>
-                            <div class='flex-row add-subtract'>
-                                <div id='subtract-order' class='icon-rectangle'></div>
-                                <p>1</p>
-                                <div id='add-order' class='add-icon'>
-                                    <div class='icon-rectangle'></div>
-                                    <div class='icon-rectangle'></div>
-                                </div>
-                            </div>
+                            <a href='../includes/addAnother.php?uniqueId=$uniqueId'>Add Another</a>
                         </div>
                     </div>
                 </div>
                 ";
             }
 
+            
+
             ?>
         </section>
         <section id="cart-footer">
             <div class="flex-col">
-                <p>Total: $5.00 <span>Cash Only</span></p>
-                <a href="orderSummary.php" class="large-yellow-btn">Go to Order Summary</a>
+                <p>Total: <?php echo $finalPrice; ?> <span>Cash Only</span></p>
+                <a href="orderSummary.php<?php echo "?total=$finalPrice"; ?>" class="large-yellow-btn">Go to Order Summary</a>
             </div>
         </section>
+        </div>
+        <div id="cart-has-nothing">
+        <div class="menu-header flex-row">
+            <div class="col-1-3">
+                <a href="../home.php" class="flex-row">
+                    <img src="../media/images/general-menu-arrow.svg" alt="Happy Sunshine Arrow">
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="col-1-3">
+                <h2>My Cart</h2>
+            </div>
+            <div class="col-1-3"></div>
+        </div>
+        <section id="nothing-bird">
+            <h3>Your cart is empty!</h3>
+            <img src="../media/images/crying-bird.svg" alt="Crying Bird">
+        </section>
+        <section id="cart-footer">
+            <div class="flex-col">
+                <a href="menu.php" class="large-yellow-btn">View Menu</a>
+            </div>
+        </section>
+    </div>
         <script src="../scripts/script.js" async defer></script>
     </body>
 </html>
