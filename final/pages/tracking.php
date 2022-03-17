@@ -75,7 +75,7 @@ $time = $_GET['time'];
             <div class="col-1-3"></div>
         </div>
         <section id="tracking-animation">
-            <img id="tracking-image" src="../media/images/Tracking-Egg-1.svg" alt="Tracking Animation">
+            <img id="tracking-image" src="../media/images/Tracking-egg-1.svg" alt="Tracking Animation">
         </section>
         <section id="tracking-info">
             <div id="tracking-titles">
