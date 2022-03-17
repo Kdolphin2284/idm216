@@ -82,7 +82,7 @@ $price = $_GET['price'];
                 <div class="col-1-3"></div>
             </div>
             <div id="thanks-for-order">
-                <p>Thank you for ordering! Show this screen when picking up your order at <a href="#">33rd and Arch St. <img src="../media/images/happy-sunshine-link.svg"></a></p>
+                <p>Thank you for ordering! Show this screen when picking up your order at <a href="https://goo.gl/maps/831imkCAV1D99KYcA" target="_blank">33rd and Arch St. <img src="../media/images/happy-sunshine-link.svg"></a></p>
             </div>
             <div id="whole-order-receipt">
                         <?php

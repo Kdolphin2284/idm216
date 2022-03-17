@@ -248,7 +248,7 @@ $totalPrice = $_GET['total'];
         <section id="cart-footer">
             <div class="flex-col">
                 <h5>Pick-up location:</h5>
-                <a href="#">33rd Street and Arch Street Phildelphia, PA 19104</a>
+                <a href="https://goo.gl/maps/831imkCAV1D99KYcA" target="_blank">33rd Street and Arch Street Phildelphia, PA 19104</a>
                 <p>Total: <?php echo $totalPrice; ?> <span>Cash Only</span></p>
                 <button id="modal-button" class="large-yellow-btn">Confirm Order</button>
             </div>

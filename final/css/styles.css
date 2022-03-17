@@ -1376,6 +1376,9 @@ button.active, label.active,  input:checked + label{
     font-size: 22px;
     line-height: normal;
 }
+#tracking-info {
+    margin-bottom: 50px;
+}
 }
 @media only screen and (max-width: 500px) {
 h1 {
@@ -1711,6 +1714,15 @@ h1 {
 #login-container form field input {
     width: 400px;
 }
+#name-form {
+    padding: 30px;
+}
+#name-form form h2 {
+    font-size: 22px;
+}
+#name-form form field input {
+    width: 300px;
+}
 }
 @media only screen and (max-width: 550px){
 #login-container form field input {
@@ -1718,6 +1730,13 @@ h1 {
 }
 #login-container h2 {
     font-size: 32px;
+}
+#name-form form h2 {
+    margin-bottom: 24px;
+    font-size: 20px;
+}
+#name-form form field input {
+    width: 250px;
 }
 }
 
@@ -2028,6 +2047,14 @@ margin-right: 35px;
     height: 400px;
 }
 }
-
+@media only screen and (max-width: 400px) {
+#name-form {
+    display: block;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    border-radius: 0;
+}
+}
 
   
