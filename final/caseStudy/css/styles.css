@@ -1,0 +1,428 @@
+/* ///// GENERAL GLOBAL CSS ///// */
+
+body {
+    background: #fff;
+}
+.col-1-1 {
+    width: 100%;
+}
+.col-2-3 {
+    width: 66%;
+}
+.col-1-2 {
+    width: 50%;
+}
+.col-1-3 {
+    width: 33%;
+}
+.col-1-4 {
+    width: 25%;
+}
+.col-1-6 {
+    width: 12.5%;
+}
+.flexContain {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+h2 {
+    font-family: Poppins-Bold;
+    letter-spacing: 1px;
+    font-size: 50px;
+    margin: 0 0 20px 0;
+} 
+h3 {
+    font-family: Poppins-Bold;
+    font-size: 34px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+h4 {
+    font-family: Poppins-Regular;
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+h5 {
+    color: #000;
+    font-size: 20px;
+    font-family: Poppins-Bold;
+}
+p {
+    font-family: Poppins-Regular;
+    line-height: 24px;
+    font-size: 16px;
+    margin: 0;
+}
+a {
+    font-family: Poppins-Bold;
+    text-transform: none;
+    text-decoration: none;
+    color: #000;
+    background: #F0D028 !important;
+    border: 4px solid #F0D028;
+    display: block;
+    width: max-content;
+    margin-top: 15px;
+    transition: all .5s ease-in-out;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+a:hover {
+    background: transparent !important;
+} 
+section:not(:first-child) {
+    padding: 50px 0;
+}
+.contentContain > .col-1-1:not(:last-child) {
+    margin-bottom: 30px;
+}
+.title {
+    position: relative;
+    margin-bottom: 38px;
+}
+.title::before {
+    position: absolute;
+    display: block;
+    content: '';
+    bottom: -4px;
+    left: 0;
+    background: #000;
+    height: 5px;
+    width: 220px;
+}
+
+/* ///// FONTS ///// */
+
+@font-face {
+    font-family: "Arbutus Slab";
+    src: url('../fonts/arbutus-slab-regular.woff2') format("woff2"),
+         url('../fonts/arbutus-slab-regular.woff') format("woff"),
+         url('../fonts/arbutus-slab-regular.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Roboto Bold";
+    src: url('../fonts/Roboto-Bold.woff2') format("woff2"),
+         url('../fonts/Roboto-Bold.woff') format("woff"),
+         url('../fonts/Roboto-Bold.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Roboto";
+    src: url('../fonts/Roboto-Regular.woff2') format("woff2"),
+         url('../fonts/Roboto-Regular.woff') format("woff"),
+         url('../fonts/Roboto-Regular.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url('../fonts/Poppins-Regular.ttf');
+    src: url('../fonts/Poppins-Regular.woff');
+    src: url('../fonts/Poppins-Regular.woff2');
+}
+@font-face {
+    font-family: "Poppins-Semibold";
+    src: url('../fonts/Poppins-SemiBoldItalic.ttf');
+    src: url('../fonts/Poppins-SemiBold.woff');
+    src: url('../fonts/Poppins-SemiBold.woff2');
+}
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url('../fonts/Poppins-Bold.ttf');
+    src: url('../fonts/Poppins-Bold.woff');
+    src: url('../fonts/Poppins-Bold.woff2');
+}
+
+/* ///// HERO ///// */
+
+#hero {
+    background: url(../media/images/idm216-screenshot.png);
+    height: 55vh;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#hero::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.75);
+}
+#hero h1 {
+    position: relative;
+    color: #fff;
+    font-family: Poppins-Bold;
+    font-size: 70px;
+    padding: 20px;
+}
+
+/* ///// OVERVIEW ///// */
+
+#overview {
+    background: #F0D028;
+}
+#overview h2, #overview p {
+    color: #fff;
+}
+#overview p {
+    padding-left: 18px;
+    border-left: 6px solid #fff;
+}
+#overview h2, #overview p {
+    color: #000;
+}
+#overview p {
+    border-color: #000;
+}
+  
+  
+/* ///// CONTEXT AND CHALLENGES ///// */
+
+  
+
+/* ///// PROCESS AND INSIGHTS ///// */
+
+#designs .col-1-1:not(:last-child) {
+    margin-bottom: 25px;
+}
+#designs .col-1-1 .designImages .col-1-4 {
+    padding-bottom: 30%;
+    width: 48%;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    position: relative;
+}
+#designs .col-1-1 .designImages .col-1-4:first-child, #designs .col-1-1 .designImages .col-1-4:nth-child(2) {
+    margin-bottom: 4%;
+}
+#designs .col-1-1 .designImages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+}
+#designs .col-1-1:nth-child(1) .designImages .col-1-4:first-child {
+    background: url('../media/images/idm241Alpha1.png');
+}
+#designs .col-1-1:nth-child(1) .designImages .col-1-4:nth-child(2) {
+    background: url('../media/images/idm241Alpha2.png');
+}
+#designs .col-1-1:nth-child(1) .designImages .col-1-4:nth-child(3) {
+    background: url('../media/images/idm241Alpha3.png');
+}
+#designs .col-1-1:nth-child(1) .designImages .col-1-4:last-child {
+    background: url('../media/images/idm241Alpha4.png');
+}
+#designs .col-1-1:nth-child(2) .designImages .col-1-4:first-child {
+    background: url('../media/images/stepOneIDM241Beta.jpg');
+}
+#designs .col-1-1:nth-child(2) .designImages .col-1-4:nth-child(2) {
+    background: url('../media/images/stepTwoIDM241Beta.jpg');
+}
+#designs .col-1-1:nth-child(2) .designImages .col-1-4:nth-child(3) {
+    background: url('../media/images/stepThreeIDM241Beta.jpg');
+}
+#designs .col-1-1:nth-child(2) .designImages .col-1-4:last-child {
+    background: url('../media/images/stepFourIDM241Beta.jpg');
+}
+#designs .col-1-1:nth-child(3) .designImages .col-1-4:first-child {
+    background: url('../media/images/idm241Final1.jpg');
+}
+#designs .col-1-1:nth-child(3) .designImages .col-1-4:nth-child(2) {
+    background: url('../media/images/idm241Final2.jpg');
+}
+#designs .col-1-1:nth-child(3) .designImages .col-1-4:nth-child(3) {
+    background: url('../media/images/idm241Final3.jpg');
+}
+#designs .col-1-1:nth-child(3) .designImages .col-1-4:last-child {
+    background: url('../media/images/idm241Final4.jpg');
+}
+#designs .col-1-1 .designImages .col-1-4::before {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background: rgba(133, 57, 57);
+    border-bottom-right-radius: 8px;
+    color: #fff;
+    font-family: Arbutus Slab;
+    font-size: 18px;
+    content: '';
+}
+#designs .col-1-1 .designImages .col-1-4:first-child::before {
+    content: '1';
+}
+#designs .col-1-1 .designImages .col-1-4:nth-child(2)::before {
+    content: '2';
+}
+#designs .col-1-1 .designImages .col-1-4:nth-child(3)::before {
+    content: '3';
+}
+  
+#designs .col-1-1 .designImages .col-1-4:last-child::before {
+    content: '4';
+}
+.links {
+  display: flex;
+}
+.links a:not(:first-child) {
+  margin-left: 20px;
+}
+.contentContain .col-1-1 .col-1-1 .col-1-1:not(:last-child) {
+    margin-bottom: 30px;
+}
+p:not(:last-child) {
+    margin-bottom: 15px;
+  }
+/* ///// THE SOLUTION ///// */
+
+#solution .col-1-1 .designImages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+}
+#solution .col-1-1 .designImages .col-1-4 {
+    padding-bottom: 30%;
+    width: 48%;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    position: relative;
+}
+#solution .col-1-1:last-child .designImages .col-1-4:first-child {
+    background: url('../media/images/idm241FinalDev1.png');
+}
+#solution .col-1-1:last-child .designImages .col-1-4:nth-child(2) {
+    background: url('../media/images/idm241FinalDev2.png');
+}
+#solution .col-1-1:last-child .designImages .col-1-4:nth-child(3) {
+    background: url('../media/images/idm241FinalDev3.png');
+}
+#solution .col-1-1:last-child .designImages .col-1-4:last-child {
+    background: url('../media/images/idm241FinalDev4.png');
+}
+#solution .col-1-1:not(:last-child) {
+    margin-bottom: 25px;
+}
+#solution {
+    padding: 0;
+}
+#solution .col-1-1:last-child .designImages .col-1-4:first-child, #solution .col-1-1:last-child .designImages .col-1-4:nth-child(2) {
+    margin-bottom: 4%;
+}
+
+/* ///// THE RESULT ///// */
+
+
+
+/* ///// FOOTER ///// */
+
+footer {
+    padding: 30px 0;
+    background: #F0D028;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ///// MEDIA QUERIES ///// */
+
+@media only screen and (max-width: 1200px) {
+#hero h1 {
+    font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+#hero h1 {
+    font-size: 42px;
+}
+h2 {
+    font-size: 42px;
+}
+h3 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 26px;
+}  
+}
+
+@media only screen and (max-width: 767px) {
+#hero h1 {
+    font-size: 35px;
+}
+h2 {
+    font-size: 34px;
+}
+h3 {
+    font-size: 26px;
+}
+h4 {
+    font-size: 24px;
+}
+#designs .col-1-1 .designImages .col-1-4:not(:last-child) {
+    margin-bottom: 6%;
+}
+.title::before {
+    width: 160px;
+}
+#designs .col-1-1 .designImages .col-1-4 {
+    padding-bottom: 60%;
+    width: 100%;
+}
+#solution .col-1-1:last-child .designImages .col-1-4:not(:last-child) {
+    margin-bottom: 6%;
+}
+#solution .col-1-1:last-child .designImages .col-1-4 {
+    padding-bottom: 60%;
+    width: 100%;
+}
+#designs .col-1-1 .designImages {
+    margin-bottom: 50px;
+}
+}
+
+@media only screen and (max-width: 590px) {
+.flexContain {
+    padding: 0 30px;
+}
+#hero h1 {
+    font-size: 37px;
+}
+a {
+    font-size: 14px;
+}
+.links a {
+    margin-left: 0 !important;
+    width: 100%;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.links {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#solution a {
+    width: auto;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+}
+
+  
